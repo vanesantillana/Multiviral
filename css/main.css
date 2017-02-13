@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .color {
-    color: #B20000;
+    color: #ED3237;
 }
 
 .sub-title {
@@ -301,12 +301,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse .navbar-nav > li.current > a {
-    color: #B20000;
+    color: #ED3237;
     background-color: #2f3238;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #B20000;
+    color: #ff383f;
 }
 
 
