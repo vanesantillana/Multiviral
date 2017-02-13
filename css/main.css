@@ -1,3 +1,12 @@
+ @font-face {
+    font-family: 'astera';
+    src: url('../fonts/astera.ttf?v=4.1.0');
+    src: local(‘☺’), url('../fonts/astera.ttf?v=4.1.0') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     background-color: #2B2C30;
 	font-family: 'Ubuntu', 'Arial', sans-serif;
@@ -170,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .color {
-    color: #6CB670;
+    color: #B20000;
 }
 
 .sub-title {
@@ -207,6 +216,10 @@ h1, h2, h3, h4, h5, h6 {
 
 #home {
     position: relative;
+}
+
+#home h2{
+	font-family: 'astera';
 }
 
 #slitSlider .carousel-caption {
@@ -271,6 +284,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand h1 {
 	margin: 0;
+	font-family: 'astera';
+	color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -286,12 +301,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-inverse .navbar-nav > li.current > a {
-    color: #6cb670;
+    color: #B20000;
     background-color: #2f3238;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #6cb670;
+    color: #B20000;
 }
 
 
@@ -421,14 +436,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*=================================================================
-	Services section
+	servicio section
 ==================================================================*/
 
-#services {
+#servicio {
     padding: 70px 0 100px;
 }
 
-#services .title {
+#servicio .title {
     padding-bottom: 125px;
 }
 
@@ -813,7 +828,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .price-title > h3 {
-    color: #6cb670;
+    color: #FFF;
     font-family: Oswald;
     font-weight: 700;
     margin: 0 0 10px;
@@ -827,7 +842,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .price-title .value {
-	color: #6cb670;
+	color: #808080;
 	font-size: 30px;
 }
 
@@ -856,14 +871,24 @@ h1, h2, h3, h4, h5, h6 {
 	Testimonial section
 ==================================================================*/
 
-#testimonial {
+#paquete{
     background-image: url(../img/parallax/bicycle.jpg);
     padding: 70px 0;
 }
 
-#testimonials .owl-wrapper-outer {
+#paquete .owl-wrapper-outer {
   top: -25px;
 }
+
+#contacto{
+    background-image: url(../img/parallax/bicycle.jpg);
+    padding: 70px 0;
+}
+
+#contacto .owl-wrapper-outer {
+  top: -25px;
+}
+
 
 .client-info {
   margin: 0 auto;
@@ -1016,7 +1041,7 @@ h1, h2, h3, h4, h5, h6 {
 	Contact
 ==================================================================*/
 
-#contact-us {
+#cotizacion {
     padding: 70px 0 0;
 }
 
