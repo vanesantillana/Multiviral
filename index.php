@@ -1,34 +1,5 @@
 <?php
-<<<<<<< HEAD
     if (!isset($_POST['email'])) {
-=======
-/*    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
-    $name     =   $_POST['nombre']; 
-    $celular     =   $_POST['celular'];   
-    $email    =   $_POST['email'];
-    $subject  =   $_POST['subject'];
-    $message  =   $_POST['message'];
-    
-    $headers  = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    
-    if(mail($email_to, $celular, $name, $subject, $message, $headers)){
-        echo 'Tu mensaje se ha enviado correctamente'; // we are sending this text to the ajax request telling it that the mail is sent..      
-    }else{
-        echo 'fallo';// ... or this one to tell it that it wasn't sent    
-    }*/
-
-    $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
-	$tam=count($servicio);
-	$opcion="";
-	for ($i=0; $i<$tam ; $i++) { 
-		$opcion=$opcion."<option value='";
-		$opcion=$opcion.$i;
-		$opcion=$opcion."'>";
-		$opcion=$opcion.$servicio[$i][0];
-		$opcion=$opcion."</option>";
-	}
->>>>>>> 3c042002d96cebc78f1f461bd6259f8d0429f6ca
 ?>
 
 <!DOCTYPE html>
