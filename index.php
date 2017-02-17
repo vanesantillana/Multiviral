@@ -27,7 +27,8 @@
 		} 	
 	}
 
-	$servicio=array(array("Selecciona dato","0"));//,array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+	$servicio=array(array("Selecciona servicio","0"));
+	//,array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
 	$tam=count($rows);
 	for ($i=0; $i<$tam; $i++) {
 		array_push($servicio, array($rows[$i][1],$rows[$i][2]));
@@ -98,6 +99,7 @@
 		</script>
 		<script type="text/javascript">
     		var servicio=<?php echo json_encode($servicio);?>;
+    		var servicios_select = new Array();
 /*    var opcion="";
     for (var i=0; i<servicio.length; i++) { 		 
 		opcion=opcion+"<option value=";
@@ -502,47 +504,46 @@
 					<!-- /section title -->
 					
 					<!-- Contact Details -->
-						<form id="contact-form" method="post" action="" role="form">
-				<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+					<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
+						<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Nombre" class="form-control" name="nombre-c" id="nombre">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre-c" id="nombre" required>
 							</div>
 							<div class="form-group">
-								<input type="email" placeholder="Correo Electronico" class="form-control" name="email-c" id="email">
+								<input type="email" placeholder="Correo Electronico" class="form-control" name="email-c" id="email" required>
 							</div>
 							<div class="form-group">
 								<input type="text" placeholder="Nombre de tu Empresa y/o Negocio" class="form-control" name="nombre-empresa" id="nombre-empresa">
 							</div>
 							<div class="form-group">
-								<input type="text" placeholder="Celular" class="form-control" name="celular-c" id="celular">
+								<input type="text" placeholder="Celular" class="form-control" name="celular-c" id="celular" required>
 							</div>
 							<div class="form-group">
 								<input type="text" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro">
 							</div>
-						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
-					</div>
-					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
-						<div id="div_1" class="row">
-				    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
-							  		<?php echo $opcion; ?>
-						    	</select>
-			     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
-		     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
-								<br>		
+							<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 						</div>
-						<div class="row">
-							<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
-							<div class="price-title" style="text-align: center;">								
-								<p>S/. <strong class="value" id="total_final" >750</strong></p>
-							</div>							
-							<br>
-							<div id="cf-submit">						 
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
-							</div>	
-						</div>					
-							
-					</div>
+						<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
+							<div id="div_1" class="row">
+					    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+								  		<?php echo $opcion; ?>
+							    	</select>
+				     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
+			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
+									<br>		
+							</div>
+							<div class="row">
+								<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
+								<div class="price-title" style="text-align: center;">								
+									<p>S/. <strong class="value" id="total_final" ></strong></p>
+								</div>							
+								<br>
+								<div id="cf-submit">						 
+									<input type="submit" id="cotizar_final" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+								</div>
+							</div>					
+						</div>
 				</form>
 		
 				
@@ -739,20 +740,36 @@ function bu1() {
 
 <?php
 }else{
+	
 	$mensaje="Cliente de MULTIVIRAL";
 	$mensaje.= "\nNombre: ". $_POST['nombre'];
 	$mensaje.= "\nEmail: ".$_POST['email'];
 	$mensaje.= "\nTelefono: ". $_POST['celular'];
 	$mensaje.= "\nAsunto: ". $_POST['asunto'];
 	$mensaje.= "\nMensaje: ".$_POST['mensaje'];
+
+	$cotizacion="Cliente de MULTIVIRAL con Presupuesto";
+	$cotizacion.= "\nNombre : ". $_POST['nombre-c'];
+	$cotizacion.= "\nEmail : ".$_POST['email-c'];
+	$cotizacion.= "\nNombre de la Empresa/Negocio : ". $_POST['nombre-empresa'];
+	$cotizacion.= "\nTelefono : ". $_POST['celular-c'];
+	$cotizacion.= "\nRubro : ". $_POST['rubro'];
+	$cotizacion.= "\nTotal : ". $_POST['total'];
+
 	$destino= "multiviralbeta@gmail.com";
 	$destino2="vanessa.santillana@ucsp.edu.pe";
 	$destino3="anibal.ventura@ucsp.edu.pe";
 	$remitente = $_POST['email'];
-	$asunto = "Asunto: Contacto Web de Multiviral";
+	$remitente_c = $_POST['email-c'];
+
+	$asunto = "Asunto: CONTACTO WEB DE MULTIVIRAL";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino3,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino,$asunto,$cotizacion,"FROM: $remitente_c");
+	mail($destino2,$asunto,$cotizacion,"FROM: $remitente_c");
+	mail($destino3,$asunto,$cotizacion,"FROM: $remitente_c");
+?>
 ?>
 <?php
    echo "<script>";
