@@ -1,0 +1,30 @@
+//instalar
+sudo apt-get install mysql-server
+
+//acceder a mysql
+mysql -u root -p
+
+//revisar las DB existentes
+SHOW DATABASES;
+
+//crear BD para prueba
+CREATE DATABASE prueba;
+
+//crear tabla para probar
+CREATE TABLE servicios (
+id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(30) NOT NULL,
+costo VARCHAR(30) NOT NULL,
+descripcion VARCHAR(50)
+);
+
+//revisar campos creados en la tabla
+ DESCRIBE servicios;
+
+//modificar una columna - descripcion
+ALTER TABLE servicios MODIFY descripcion CHAR(255);
+
+//insertar datos a la tabla
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "diseño web", "380","Diseño de la pagina web de manera eficiente");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Desarrollo web", "400","Realizamos sistemas exclusivamente para su empresa, adaptándose a la perfección de sus necesidades");

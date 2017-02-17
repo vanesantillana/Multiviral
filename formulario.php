@@ -1,5 +1,20 @@
 <?php 
-	$servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+ $dbhost = 'localhost';
+ $dbuser = 'root';
+ $dbpass = '123456';
+ $dbname = 'prueba';
+ ini_set('display_errors', 1);
+ error_reporting(E_ALL);
+ $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
+
+
+$query="SELECT * FROM servicios";
+$result = $conn->query($query);
+while ($row = mysqli_fetch_assoc($result)) {
+    echo $row["nombre"];
+    echo "<br>";
+}
+ 	$servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
 	$tam=count($servicio);
 	$opcion="";
 	for ($i=0; $i<$tam ; $i++) { 
@@ -14,7 +29,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
  <script type="text/javascript">
     var servicio=<?php echo json_encode($servicio);?>;
 /*    var opcion="";
