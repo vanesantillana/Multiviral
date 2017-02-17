@@ -10,10 +10,7 @@
 
 $query="SELECT * FROM servicios";
 $result = $conn->query($query);
-while ($row = mysqli_fetch_assoc($result)) {
-    echo $row["nombre"];
-    echo "<br>";
-}
+
  	$servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
 	$tam=count($servicio);
 	$opcion="";
@@ -40,7 +37,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 		opcion=opcion+"</option>";
 	}*/
  </script>
+<?php 	
+while ($row = mysqli_fetch_assoc($result)) {
+    echo $row["nombre"];
+    echo "<br>";
+}
 
+ ?>
 <title>Prueba</title>
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.addfield.js"></script>
