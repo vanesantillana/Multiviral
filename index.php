@@ -1,6 +1,5 @@
 <?php
 
-    
     $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
 	$tam=count($servicio);
 	$opcion="";
@@ -396,6 +395,7 @@
 								<li>Administrador de contenidos</li>
 								<li>Configuracion de Base de Datos</li>
 								<li>Soporte multi idioma</li>
+
 							</ul>
 							<div class="price-title">								
 								<p>S/.<strong class="value">550</strong></p>
@@ -469,36 +469,38 @@
 				<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Tu nombre" class="form-control" name="nombre" id="nombre">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre">
 							</div>
 							<div class="form-group">
-								<input type="email" placeholder="Tu correo electronico" class="form-control" name="email" id="email">
+								<input type="email" placeholder="Correo Electronico" class="form-control" name="email" id="email">
 							</div>
 							<div class="form-group">
-								<input type="text" placeholder="Nombre de tu empresa y/o negocio" class="form-control" name="nombre-empresa" id="nombre-empresa">
+								<input type="text" placeholder="Nombre de tu Empresa y/o Negocio" class="form-control" name="nombre-empresa" id="nombre-empresa">
 							</div>
 							<div class="form-group">
-								<input type="text" placeholder="Numero de celular" class="form-control" name="celular" id="celular">
+								<input type="text" placeholder="Celular" class="form-control" name="celular" id="celular">
 							</div>
 							<div class="form-group">
-								<textarea rows="6" placeholder="Rubro y/o ocupacion de la empresa" class="form-control" name="rubro" id="rubro"></textarea>	
+								<textarea rows="6" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro"></textarea>	
 							</div>
 						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 					</div>
 					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
-					<div id="div_1" class="row">
-			    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
-						  		<?php echo $opcion; ?>
-					    	</select>
-		     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
-	     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
-							<br>		
-					</div>
-
-					<span>Total: <input class="form-control" type="text" id="total_final" value="0"/></span>
-						<div id="cf-submit">
-							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
-						</div>						
+						<div id="div_1" class="row">
+				    			<select class="importe_linea form-control" type="button" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+							  		<?php echo $opcion; ?>
+						    	</select>
+			     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
+		     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
+								<br>		
+						</div>
+						<div class="row">
+							<span>Total: <input class="form-control" type="text" id="total_final" value="0"/></span>
+							<br>
+							<div id="cf-submit">						 
+								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+							</div>	
+						</div>					
 							
 					</div>
 				</form>
@@ -577,7 +579,7 @@
 							</div>
 							
 							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar">
+								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar" style="border-color: #ED3237;">
 							</div>						
 							
 						</form>
@@ -602,7 +604,7 @@
 						<div class="social-icon">
 							<ul>
 								<li><a href="https://www.facebook.com/multiviralbeta" target="_BLANK"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="https://twitter.com/multiviralbeta?cn=bG9naW5fbm90aWZpY2F0aW9u&refsrc=email" target="_BLANK"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
