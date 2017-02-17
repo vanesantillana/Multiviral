@@ -532,7 +532,10 @@
 								<br>		
 						</div>
 						<div class="row">
-							<span>Total: <input class="form-control" type="text" id="total_final" value="0"/></span>
+							<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
+							<div class="price-title" style="text-align: center;">								
+								<p>S/. <strong class="value" id="total_final" >750</strong></p>
+							</div>							
 							<br>
 							<div id="cf-submit">						 
 								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
