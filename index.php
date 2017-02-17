@@ -4,7 +4,7 @@
 	$tam=count($servicio);
 	$opcion="";
 	for ($i=0; $i<$tam ; $i++) { 
-		$opcion=$opcion."<option value='";
+		$opcion=$opcion."<option class='prueba' value='";
 		$opcion=$opcion.$i;
 		$opcion=$opcion."'>";
 		$opcion=$opcion.$servicio[$i][0];
@@ -74,6 +74,11 @@
 		opcion=opcion+"</option>";
 	}*/
  		</script>
+ 		<style>
+ 			.prueba {background-color: #333;
+					
+ 					 }
+ 		</style>
     </head>
 	
     <body id="body">
@@ -487,7 +492,7 @@
 					</div>
 					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
 						<div id="div_1" class="row">
-				    			<select class="importe_linea form-control" type="button" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+				    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 							  		<?php echo $opcion; ?>
 						    	</select>
 			     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
