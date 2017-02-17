@@ -43,7 +43,7 @@ a, a:focus, a:hover {
 }
 
 a:focus, a:hover {
-    color: #6CB670;
+    color: #ED3237;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-green {
-    background-color: #6cb670;
+    background-color: #ED3237;
 }
 
 .btn-green:focus, 
@@ -88,11 +88,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-transparent:focus {
     background-color: transparent;
-    border-color: #6cb670;
+    border-color: #ED3237;
 }
 
 .btn-transparent:hover {
-    background-color: #6cb670;
+    background-color: #ED3237;
 	border: 1px solid transparent;
     color: #fff;
 }
@@ -773,7 +773,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mask ul li a:hover {
-    background-color: #6cb670;
+    background-color: #ED3237;
     border: 1px solid transparent;
 }
 
@@ -789,9 +789,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .twitter-bird span {
-    border: 2px solid #6cb670;
+    border: 2px solid #ED3237;
     border-radius: 50px;
-    color: #6cb670;
+    color: #ED3237;
     display: inline-block;
     margin-bottom: 50px;
     height: 90px;
@@ -807,7 +807,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tweet a {
-    color: #6cb670;
+    color: #ED3237;
 }
 
 /*=================================================================
@@ -940,7 +940,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-profile li a:hover {
-	color: #6CB670;
+	color: #ED3237;
 }
 
 .owl-pagination,
@@ -966,7 +966,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .owl-controls .owl-page.active span,
 .owl-controls .owl-page:hover span {
-    background-color: #6cb670;
+    background-color: #ED3237;
     border: 2px solid transparent;
 }
 
@@ -1058,7 +1058,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form input:hover, 
 .contact-form textarea:hover,
 #contact-submit:hover {
-    border-color: #6CB670;
+    border-color: white;
 }
 
 #contact-submit {
@@ -1100,7 +1100,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .success {
-    background-color: #6cb670;
+    background-color: #ED3237;
     border-radius: 4px;
     color: #fff;
     display: none;
@@ -1172,7 +1172,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-icon > ul > li:hover a {
-    background-color: #6CB670;
+    background-color: #ED3237;
 	
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
@@ -1214,8 +1214,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #scrollUp:hover {
-    background-color: #6cb670;
-    border: 1px solid #6cb670;
+    background-color: #ED3237;
+    border: 1px solid #ED3237;
 }
 
 
