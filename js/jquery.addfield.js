@@ -29,18 +29,18 @@ $(document).ready(function() {
 
 
 function addField(){
-var clickID = parseInt($(this).parent('div').attr('id').replace('div_',''));
-var newID = (clickID+1);
-$("#total").val(newID);
+	var clickID = parseInt($(this).parent('div').attr('id').replace('div_',''));
+	var newID = (clickID+1);
+	$("#total").val(newID);
 
-$newClone = $('#div_'+clickID).clone(true);
-$newClone.attr("id",'div_'+newID);
-$newClone.children("select").eq(0).attr("id",'servicio'+newID).attr("name",'servicio'+newID).val('0');
-$newClone.children("p").eq(0).attr("id",'demo'+newID).html("");
-$newClone.children("input").eq(0).attr("id",newID);
-$newClone.insertAfter($('#div_'+clickID));
-$("#"+clickID).val('-').unbind("click",addField);
-$("#"+clickID).bind("click",delRow);							   
+	$newClone = $('#div_'+clickID).clone(true);
+	$newClone.attr("id",'div_'+newID);
+	$newClone.children("select").eq(0).attr("id",'servicio'+newID).attr("name",'servicio'+newID).val('0');
+	$newClone.children("p").eq(0).attr("id",'demo'+newID).html("");
+	$newClone.children("input").eq(0).attr("id",newID);
+	$newClone.insertAfter($('#div_'+clickID));
+	$("#"+clickID).val('-').unbind("click",addField);
+	$("#"+clickID).bind("click",delRow);							   
 }
 
 

@@ -1,17 +1,11 @@
 <?php
-    //we need to get our variables first
-    
-    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
+/*    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
     $name     =   $_POST['nombre']; 
     $celular     =   $_POST['celular'];   
     $email    =   $_POST['email'];
     $subject  =   $_POST['subject'];
     $message  =   $_POST['message'];
     
-    /*the $header variable is for the additional headers in the mail function,
-     we are asigning 2 values, first one is FROM and the second one is REPLY-TO.
-     That way when we want to reply the email gmail(or yahoo or hotmail...) will know 
-     who are we replying to. */
     $headers  = "From: $email\r\n";
     $headers .= "Reply-To: $email\r\n";
     
@@ -19,7 +13,18 @@
         echo 'Tu mensaje se ha enviado correctamente'; // we are sending this text to the ajax request telling it that the mail is sent..      
     }else{
         echo 'fallo';// ... or this one to tell it that it wasn't sent    
-    }
+    }*/
+
+    $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+	$tam=count($servicio);
+	$opcion="";
+	for ($i=0; $i<$tam ; $i++) { 
+		$opcion=$opcion."<option value='";
+		$opcion=$opcion.$i;
+		$opcion=$opcion."'>";
+		$opcion=$opcion.$servicio[$i][0];
+		$opcion=$opcion."</option>";
+	}
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +78,16 @@
 		  ga('send', 'pageview');
 		
 		</script>
+		<script type="text/javascript">
+    		var servicio=<?php echo json_encode($servicio);?>;
+/*    var opcion="";
+    for (var i=0; i<servicio.length; i++) { 		 
+		opcion=opcion+"<option value=";
+		opcion=opcion+"1";
+		opcion=opcion+servicio[i][0];
+		opcion=opcion+"</option>";
+	}*/
+ 		</script>
     </head>
 	
     <body id="body">
@@ -481,25 +496,21 @@
 							<div class="form-group">
 								<textarea rows="6" placeholder="Rubro y/o ocupacion de la empresa" class="form-control" name="rubro" id="rubro"></textarea>	
 							</div>
+						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 					</div>
-		
-					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">			
-								<div class="container">
-		<form id="form" name="form" method="post" action="">  
-			<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
-			<div id="div_1" class="row">
-		    	<select class="col-md-2 importe_linea" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
-					  <?php echo $opcion; ?>
-		    	</select> 
-		     	<p class="col-md-2" id="demo1" name="demo"></p>
-		     	<input class="col-md-2 bt_plus" id="1" type="button" value="+" />
-			</div>
-			Total: <input type="text" id="total_final" value="0"/>
-		</form>
-	</div>
-							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
-							</div>						
+					<div class="contact-form col-md-6 wow fadeInUp" style="color: black;" data-wow-duration="500ms" data-wow-delay="300ms">			
+					<div id="div_1" class="row">
+			    			<select class="col-md-6 importe_linea" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+						  		<?php echo $opcion; ?>
+					    	</select>
+		     				<p class="col-md-5" id="demo1" name="demo"></p>
+	     					<input class="col-md-1 bt_plus" id="1" type="button" value="+" />
+							
+					</div>
+					<span>Total: <input type="text" id="total_final" value="0"/></span>
+						<div id="cf-submit">
+							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
+						</div>						
 							
 					</div>
 				</form>
@@ -643,6 +654,8 @@
 		
 		<!-- Main jQuery -->
 		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.addfield.js"></script>
+
 		<!-- Bootstrap 3.1 -->
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Slitslider -->
