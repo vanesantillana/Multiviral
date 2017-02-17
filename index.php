@@ -1,5 +1,34 @@
 <?php
+<<<<<<< HEAD
     if (!isset($_POST['email'])) {
+=======
+/*    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
+    $name     =   $_POST['nombre']; 
+    $celular     =   $_POST['celular'];   
+    $email    =   $_POST['email'];
+    $subject  =   $_POST['subject'];
+    $message  =   $_POST['message'];
+    
+    $headers  = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    
+    if(mail($email_to, $celular, $name, $subject, $message, $headers)){
+        echo 'Tu mensaje se ha enviado correctamente'; // we are sending this text to the ajax request telling it that the mail is sent..      
+    }else{
+        echo 'fallo';// ... or this one to tell it that it wasn't sent    
+    }*/
+
+    $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+	$tam=count($servicio);
+	$opcion="";
+	for ($i=0; $i<$tam ; $i++) { 
+		$opcion=$opcion."<option value='";
+		$opcion=$opcion.$i;
+		$opcion=$opcion."'>";
+		$opcion=$opcion.$servicio[$i][0];
+		$opcion=$opcion."</option>";
+	}
+>>>>>>> 3c042002d96cebc78f1f461bd6259f8d0429f6ca
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +82,16 @@
 		  ga('send', 'pageview');
 		
 		</script>
+		<script type="text/javascript">
+    		var servicio=<?php echo json_encode($servicio);?>;
+/*    var opcion="";
+    for (var i=0; i<servicio.length; i++) { 		 
+		opcion=opcion+"<option value=";
+		opcion=opcion+"1";
+		opcion=opcion+servicio[i][0];
+		opcion=opcion+"</option>";
+	}*/
+ 		</script>
     </head>
 	
     <body id="body">
@@ -443,7 +482,7 @@
 					<!-- /section title -->
 					
 					<!-- Contact Details -->
-						<form id="contact-form" method="post" action="sendmail.php" role="form">
+						<form id="contact-form" method="post" action="" role="form">
 				<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 						
 							<div class="form-group">
@@ -461,49 +500,25 @@
 							<div class="form-group">
 								<textarea rows="6" placeholder="Rubro y/o ocupacion de la empresa" class="form-control" name="rubro" id="rubro"></textarea>	
 							</div>
-							
-							<div id="mail-success" class="success">
-								Thank you. The Mailman is on His Way :)
-							</div>
-							
-							<div id="mail-fail" class="error">
-								Sorry, don't know what happened. Try later :(
-							</div>
+						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 					</div>
-		
-					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-						
-						
-							<div class="form-group">
-								<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
-							</div>
+					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
+					<div id="div_1" class="row">
+			    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+						  		<?php echo $opcion; ?>
+					    	</select>
+		     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
+	     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
+							<br>		
+					</div>
+
+					<span>Total: <input class="form-control" type="text" id="total_final" value="0"/></span>
+						<div id="cf-submit">
+							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
+						</div>						
 							
-							<div class="form-group">
-								<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
-							</div>
-							
-							<div class="form-group">
-								<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
-							</div>
-							
-							<div class="form-group">
-								<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
-							</div>
-							
-							<div id="mail-success" class="success">
-								Thank you. The Mailman is on His Way :)
-							</div>
-							
-							<div id="mail-fail" class="error">
-								Sorry, don't know what happened. Try later :(
-							</div>
-							
-							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
-							</div>						
-							
-						</div>
-						</form>
+					</div>
+				</form>
 		
 				
 				</div> <!-- end row -->
@@ -644,6 +659,8 @@
 		
 		<!-- Main jQuery -->
 		<script src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/jquery.addfield.js"></script>
+
 		<!-- Bootstrap 3.1 -->
 		<script src="js/bootstrap.min.js"></script>
 		<!-- Slitslider -->
