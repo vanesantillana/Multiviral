@@ -99,7 +99,7 @@ for ($i=0; $i<$tam; $i++) {
 		<script type="text/javascript">
     		var servicio=<?php echo json_encode($servicio);?>;
 /*    var opcion="";
-    for (var i=0; i<servicio.length; i++) { 		 
+    for (var i=0; i<servicio.length; i++){
 		opcion=opcion+"<option value=";
 		opcion=opcion+"1";
 		opcion=opcion+servicio[i][0];
@@ -406,7 +406,7 @@ for ($i=0; $i<$tam; $i++) {
 								<p>S/.<strong class="value">350</strong> </p>
 							</div>
 							<!-- Solicitar button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p1" href="#contacto">Solicitar</a>
 							<!-- /signup button -->
 							
 						</div>
@@ -440,7 +440,7 @@ for ($i=0; $i<$tam; $i++) {
 							<!-- /plan description -->
 							
 							<!-- signup button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p2" href="#contacto">Solicitar</a>
 							<!-- /signup button -->
 							
 						</div>
@@ -473,7 +473,7 @@ for ($i=0; $i<$tam; $i++) {
 								<p>S/. <strong class="value">750</strong></p>
 							</div>							
 							<!-- signup button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p3" href="#contacto">Solicitar</a>
 							<!-- /Solicitar button -->
 							
 						</div>
@@ -520,7 +520,7 @@ for ($i=0; $i<$tam; $i++) {
 							<div class="form-group">
 								<textarea rows="6" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro"></textarea>	
 							</div>
-						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
+						<input type="text" value="" id="total" name="total" style="visibility: hidden;">
 					</div>
 					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
 						<div id="div_1" class="row">
@@ -538,7 +538,7 @@ for ($i=0; $i<$tam; $i++) {
 							</div>							
 							<br>
 							<div id="cf-submit">						 
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+								<input type="submit" id="cotizar_final" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
 							</div>	
 						</div>					
 							

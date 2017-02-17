@@ -9,6 +9,7 @@ function calcular_total() {
 	);
 	console.log(importe_total);
 	document.getElementById("total_final").innerHTML=importe_total;
+	
 	return importe_total;
 }
 
@@ -24,6 +25,19 @@ $(document).ready(function() {
 	document.getElementById("demo1").innerHTML = "s/. " + calcular_total().toString();
 	$(".bt_plus").each(function (el){	
 		$(this).bind("click",addField);
+	});
+
+	$( "#p1" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE BASICO");
+	});
+	$( "#p2" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE NEGOCIO");
+	});
+	$( "#p3" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE TIENDA VIRTUAL");
 	});
 });
 
