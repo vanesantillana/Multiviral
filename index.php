@@ -1,6 +1,38 @@
 <?php
+ $dbhost = 'localhost';
+ $dbuser = 'root';
+ $dbpass = '123456';
+ $dbname = 'prueba';
+ ini_set('display_errors', 1);
+ error_reporting(E_ALL);
+ $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
+ header("Content-Type: text/html;charset=utf-8");
+$conn->set_charset("utf8");
 
-    $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+$query="SELECT * FROM servicios";
+$result = $conn->query($query);
+
+$results = array();
+while($row = $result->fetch_row()) {
+  $rows[]=$row;
+}
+
+function print_array($arr){
+	for ($i=0; $i<count($arr); $i++) {
+		for ($j=0; $j<count($arr[$i]); $j++) {
+			echo $arr[$i][$j];
+			echo " | ";
+		}
+		echo "<br>";
+	} 	
+}
+
+$servicio=array(array("Selecciona dato","0"));//,array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+$tam=count($rows);
+for ($i=0; $i<$tam; $i++) {
+	array_push($servicio, array($rows[$i][1],$rows[$i][2]));
+} 
+
 	$tam=count($servicio);
 	$opcion="";
 	for ($i=0; $i<$tam ; $i++) { 
