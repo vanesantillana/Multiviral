@@ -500,13 +500,14 @@
 					</div>
 					<div class="contact-form col-md-6 wow fadeInUp" style="color: black;" data-wow-duration="500ms" data-wow-delay="300ms">			
 					<div id="div_1" class="row">
-			    			<select class="col-md-6 importe_linea" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+			    			<select class="importe_linea form-control" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 						  		<?php echo $opcion; ?>
 					    	</select>
-		     				<p class="col-md-5" id="demo1" name="demo"></p>
-	     					<input class="col-md-1 bt_plus" id="1" type="button" value="+" />
-							
+		     				<p class="form-control" id="demo1" name="demo"></p>
+	     					<input class="form-control bt_plus" id="1" type="button" value="+" />
+							<br>		
 					</div>
+
 					<span>Total: <input type="text" id="total_final" value="0"/></span>
 						<div id="cf-submit">
 							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
