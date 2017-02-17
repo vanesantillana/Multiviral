@@ -498,17 +498,17 @@
 							</div>
 						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 					</div>
-					<div class="contact-form col-md-6 wow fadeInUp" style="color: black;" data-wow-duration="500ms" data-wow-delay="300ms">			
+					<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
 					<div id="div_1" class="row">
-			    			<select class="importe_linea form-control" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
+			    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 						  		<?php echo $opcion; ?>
 					    	</select>
-		     				<p class="form-control" id="demo1" name="demo"></p>
-	     					<input class="form-control bt_plus" id="1" type="button" value="+" />
+		     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
+	     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
 							<br>		
 					</div>
 
-					<span>Total: <input type="text" id="total_final" value="0"/></span>
+					<span>Total: <input class="form-control" type="text" id="total_final" value="0"/></span>
 						<div id="cf-submit">
 							<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización">
 						</div>						
