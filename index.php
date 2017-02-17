@@ -1,4 +1,6 @@
 <?php
+
+    
     $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
 	$tam=count($servicio);
 	$opcion="";
@@ -9,6 +11,7 @@
 		$opcion=$opcion.$servicio[$i][0];
 		$opcion=$opcion."</option>";
 	}
+	if (!isset($_POST['email'])) {
 ?>
 
 <!DOCTYPE html>
@@ -543,26 +546,26 @@
 						
 					<!-- Contact Form -->
 					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-						<form id="contact-form" method="post" action="sendmail.php" role="form">
+						<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre" required>
 							</div>
 
 							<div class="form-group">
-								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular">
+								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular" required>
 							</div>
 							
 							<div class="form-group">
-								<input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email">
+								<input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email" required>
 							</div>
 							
 							<div class="form-group">
-								<input type="text" placeholder="Asunto" class="form-control" name="subject" id="subject">
+								<input type="text" placeholder="Asunto" class="form-control" name="asunto" id="asunto">
 							</div>
 							
 							<div class="form-group">
-								<textarea rows="6" placeholder="Mensaje" class="form-control" name="message" id="message"></textarea>	
+								<textarea rows="6" placeholder="Mensaje" class="form-control" name="mensaje" id="mensaje" required></textarea>	
 							</div>
 							
 							<div id="mail-success" class="success">
@@ -598,7 +601,7 @@
 						<!-- Footer Social Links -->
 						<div class="social-icon">
 							<ul>
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="https://www.facebook.com/multiviralbeta" target="_BLANK"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 							</ul>
@@ -691,3 +694,28 @@ function bu1() {
 
     </body>
 </html>
+
+<?php
+}else{
+	$mensaje="Cliente de MULTIVIRAL";
+	$mensaje.= "\nNombre: ". $_POST['nombre'];
+	$mensaje.= "\nEmail: ".$_POST['email'];
+	$mensaje.= "\nTelefono: ". $_POST['celular'];
+	$mensaje.= "\nAsunto: ". $_POST['asunto'];
+	$mensaje.= "\nMensaje: ".$_POST['mensaje'];
+	$destino= "multiviralbeta@gmail.com";
+	$destino2="vanessa.santillana@ucsp.edu.pe";
+	$destino3="anibal.ventura@ucsp.edu.pe";
+	$remitente = $_POST['email'];
+	$asunto = "Asunto: Contacto Web de Multiviral";
+	mail($destino,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino3,$asunto,$mensaje,"FROM: $remitente");
+?>
+<?php
+   echo "<script>";
+   echo "alert('Mensaje enviado con exito');";
+   echo "window.location = 'index.php';";
+   echo "</script>";  
+   }
+?>
