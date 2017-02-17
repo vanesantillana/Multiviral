@@ -8,7 +8,7 @@ function calcular_total() {
 		}
 	);
 	console.log(importe_total);
-	document.getElementById("total_final").value=importe_total;
+	document.getElementById("total_final").innerHTML=importe_total;
 	return importe_total;
 }
 
