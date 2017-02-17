@@ -1,3 +1,27 @@
+<?php
+    //we need to get our variables first
+    
+    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
+    $name     =   $_POST['nombre']; 
+    $celular     =   $_POST['celular'];   
+    $email    =   $_POST['email'];
+    $subject  =   $_POST['subject'];
+    $message  =   $_POST['message'];
+    
+    /*the $header variable is for the additional headers in the mail function,
+     we are asigning 2 values, first one is FROM and the second one is REPLY-TO.
+     That way when we want to reply the email gmail(or yahoo or hotmail...) will know 
+     who are we replying to. */
+    $headers  = "From: $email\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    
+    if(mail($email_to, $celular, $name, $subject, $message, $headers)){
+        echo 'Tu mensaje se ha enviado correctamente'; // we are sending this text to the ajax request telling it that the mail is sent..      
+    }else{
+        echo 'fallo';// ... or this one to tell it that it wasn't sent    
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,7 +50,8 @@
         <link rel="stylesheet" href="css/main.css">
 		<!-- Media Queries -->
         <link rel="stylesheet" href="css/media-queries.css">
-
+        <!-- Fa Icons-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">	
 		<!--
 		Google Font
 		=========================== -->                    
@@ -187,15 +212,15 @@
 						<div class="border"></div>
 					</div>
 					<!-- /section title -->
-					
+					<div class="row">
                     <!-- Single Service Item -->
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms">
 						<div class="service-block text-center">
 							<div class="service-icon text-center">
-								<i class="fa fa-wordpress fa-5x"></i>
+								<i class="fa fa-desktop fa-5x"></i>
 							</div>
-							<h3>WordPress Theme</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Diseño de Pagina Web</h3>
+							<p>Creamos páginas web de máxima calidad, creativas y utilizando las técnicas más innovadoras para dar una imagen profesional, moderno, limpio, intuitivo y persuasivo.</p>
 						</div>
 					</article>
                     <!-- End Single Service Item -->
@@ -204,10 +229,10 @@
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
 						<div class="service-block text-center">
 							<div class="service-icon text-center">
-								<i class="fa fa-desktop fa-5x"></i>
+								<i class="fa fa-gears fa-5x"></i>
 							</div>
-							<h3>Responsive Design</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Desarrollo Web</h3>
+							<p>Realizamos sistemas exclusivamente para su empresa, adaptándose a la perfección de sus necesidades a fin de un mejor trabajo; estamos comprometidos con el éxito de tu proyecto.</p>
 						</div>
 					</article>
                     <!-- End Single Service Item -->
@@ -216,22 +241,24 @@
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
 						<div class="service-block text-center">
 							<div class="service-icon text-center">
-								<i class="fa fa-play fa-5x"></i>
+								<i class="fa fa-tablet fa-5x"></i>
 							</div>
-							<h3>Media &amp; Advertisement</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Adaptabilidad</h3>
+							<p>Tu diseño de página web será adaptable y flexible a cualquier dispositivo móvil o tablet, además aseguraremos la velocidad y la fácil utilización del sitio web.</p>
 						</div>
 					</article>
 					<!-- End Single Service Item -->
-					
+					</div>
+
+					<div class="row">
 					<!-- Single Service Item -->
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
 						<div class="service-block text-center">
 							<div class="service-icon text-center">
-								<i class="fa fa-eye fa-5x"></i>
+								<i class="fa fa-wrench fa-5x"></i>
 							</div>
-							<h3>Graphic Design</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Optimización Web</h3>
+							<p>Nos encargamos de mejorar el rendimiento de las partes más determinantes de tu web, además se corrigen las deficiencias y se refuerza las fortalezas.</p>
 						</div>
 					</article>
 					<!-- End Single Service Item -->
@@ -240,10 +267,10 @@
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="400ms">
 						<div class="service-block text-center">
 							<div class="service-icon text-center">
-								<i class="fa fa-android fa-5x"></i>
+								<i class="fa fa-magic fa-5x"></i>
 							</div>
-							<h3>Apps Development</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Administrable</h3>
+							<p>Te ayudamos a no ser dependientes de terceros para manejar el contenido de tu web, podrás subir imagenes, videos, mensajes y más.</p>
 						</div>
 					</article>
 					<!-- End Single Service Item -->
@@ -252,13 +279,52 @@
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="600ms">
 						<div class="service-block text-center kill-margin-bottom">
 							<div class="service-icon text-center">
-								<i class="fa fa-link fa-5x"></i>
+								<i class="fa fa-line-chart fa-5x"></i>
 							</div>
-							<h3>Networking</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur.. Sed id lorem eget orci dictum facilisis vel id tellus. Nullam iaculis arcu at mauris dapibus consectetur.</p>
+							<h3>Posicionamiento Web</h3>
+							<p>Llevaremos tu página web a los primeros lugares de los buscadores como Google, de tal manera que logres llegar a tu público objetivo.</p>
 						</div>
 					</article>
 					<!-- End Single Service Item -->
+					</div>
+
+					<div class="row">
+					<!-- Single Service Item -->
+					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+						<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<i class="fa fa-android fa-5x"></i>
+							</div>
+							<h3>Desarrollo de APPS Móviles</h3>
+							<p>Tienes una idea de una App, cuéntanos nosotros nos encargamos de hacerlo realidad en sistemas operativos como Android y IOS.</p>
+						</div>
+					</article>
+					<!-- End Single Service Item -->
+
+					<!-- Single Service Item -->
+					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
+						<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<i class="fa fa-handshake-o fa-5x"></i>
+							</div>
+							<h3>Software a Medida</h3>
+							<p>Desarrollamos sistemas puntuales de acuerdo a las necesidades del cliente utilizando las ultimas tecnologías.
+							</p>
+						</div>
+					</article>
+					<!-- End Single Service Item -->
+					<!-- Single Service Item -->
+					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="600ms">
+						<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<i class="fa fa-paint-brush fa-5x"></i>
+							</div>
+							<h3>Creación de Logos</h3>
+							<p>Nuestros especialistas en marketing se encargaran de manejar una mejor imagen para tu empresa, cubriendo sus necesidades.</p>
+						</div>
+					</article>
+					<!-- End Single Service Item -->
+					</div>
 						
 				</div> 		<!-- End row -->
 			</div>   	<!-- End container -->
@@ -472,34 +538,29 @@
 					
 					<!-- section title -->
 					<div class="title text-center wow fadeIn" data-wow-duration="500ms">
-						<h2>Contactenos en<span class="color"> un toque</span></h2>
+						<h2>Contactenos<span class="color"> Ahora</span></h2>
 						<div class="border"></div>
 					</div>
 					<!-- /section title -->
 					
 					<!-- Contact Details -->
 					<div class="contact-info col-md-6 wow fadeInUp" data-wow-duration="500ms">
-						<h3>Contact Details</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, vero, provident, eum eligendi blanditiis ex explicabo vitae nostrum facilis asperiores dolorem illo officiis ratione vel fugiat dicta laboriosam labore adipisci.</p>
+						<h3>Detalles de Contácto</h3>
+						<p>Comunicate con nosotros en cualquier momento, estamos dispuestos a tu servicio, lo llamaremos dentro de las 24 horas de 8 am a 10 pm una vez enviado sus datos.</p>
 						<div class="contact-details">
 							<div class="con-info clearfix">
-								<i class="fa fa-home fa-lg"></i>
-								<span>Khaja Road, Bayzid, Chittagong, Bangladesh</span>
+								<i class="fa fa-whatsapp fa-lg"></i>
+								<span>Whatsapp: 943-434-338</span>
 							</div>
 							
 							<div class="con-info clearfix">
 								<i class="fa fa-phone fa-lg"></i>
-								<span>Phone: +880-31-000-000</span>
+								<span>Celular: 943-434-338 / 942-365-569</span>
 							</div>
-							
-							<div class="con-info clearfix">
-								<i class="fa fa-fax fa-lg"></i>
-								<span>Fax: +880-31-000-000</span>
-							</div>
-							
+														
 							<div class="con-info clearfix">
 								<i class="fa fa-envelope fa-lg"></i>
-								<span>Email: hello@meghna.com</span>
+								<span>Email: multiviralbeta@gmail.com</span>
 							</div>
 						</div>
 					</div>
@@ -510,19 +571,23 @@
 						<form id="contact-form" method="post" action="sendmail.php" role="form">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Your Name" class="form-control" name="name" id="name">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre">
+							</div>
+
+							<div class="form-group">
+								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular">
 							</div>
 							
 							<div class="form-group">
-								<input type="email" placeholder="Your Email" class="form-control" name="email" id="email">
+								<input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email">
 							</div>
 							
 							<div class="form-group">
-								<input type="text" placeholder="Subject" class="form-control" name="subject" id="subject">
+								<input type="text" placeholder="Asunto" class="form-control" name="subject" id="subject">
 							</div>
 							
 							<div class="form-group">
-								<textarea rows="6" placeholder="Message" class="form-control" name="message" id="message"></textarea>	
+								<textarea rows="6" placeholder="Mensaje" class="form-control" name="message" id="message"></textarea>	
 							</div>
 							
 							<div id="mail-success" class="success">
@@ -534,7 +599,7 @@
 							</div>
 							
 							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Submit">
+								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar">
 							</div>						
 							
 						</form>
