@@ -1,25 +1,5 @@
 <?php
-    //we need to get our variables first
-    
-    $email_to =   'multiviralbeta@gmail.com'; //the address to which the email will be sent
-    $name     =   $_POST['nombre']; 
-    $celular     =   $_POST['celular'];   
-    $email    =   $_POST['email'];
-    $subject  =   $_POST['subject'];
-    $message  =   $_POST['message'];
-    
-    /*the $header variable is for the additional headers in the mail function,
-     we are asigning 2 values, first one is FROM and the second one is REPLY-TO.
-     That way when we want to reply the email gmail(or yahoo or hotmail...) will know 
-     who are we replying to. */
-    $headers  = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    
-    if(mail($email_to, $celular, $name, $subject, $message, $headers)){
-        echo 'Tu mensaje se ha enviado correctamente'; // we are sending this text to the ajax request telling it that the mail is sent..      
-    }else{
-        echo 'fallo';// ... or this one to tell it that it wasn't sent    
-    }
+    if (!isset($_POST['email'])) {
 ?>
 
 <!DOCTYPE html>
@@ -568,26 +548,26 @@
 						
 					<!-- Contact Form -->
 					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-						<form id="contact-form" method="post" action="sendmail.php" role="form">
+						<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre" required>
 							</div>
 
 							<div class="form-group">
-								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular">
+								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular" required>
 							</div>
 							
 							<div class="form-group">
-								<input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email">
+								<input type="email" placeholder="Correo Electrónico" class="form-control" name="email" id="email" required>
 							</div>
 							
 							<div class="form-group">
-								<input type="text" placeholder="Asunto" class="form-control" name="subject" id="subject">
+								<input type="text" placeholder="Asunto" class="form-control" name="asunto" id="asunto">
 							</div>
 							
 							<div class="form-group">
-								<textarea rows="6" placeholder="Mensaje" class="form-control" name="message" id="message"></textarea>	
+								<textarea rows="6" placeholder="Mensaje" class="form-control" name="mensaje" id="mensaje" required></textarea>	
 							</div>
 							
 							<div id="mail-success" class="success">
@@ -714,3 +694,28 @@ function bu1() {
 
     </body>
 </html>
+
+<?php
+}else{
+	$mensaje="Cliente de MULTIVIRAL";
+	$mensaje.= "\nNombre: ". $_POST['nombre'];
+	$mensaje.= "\nEmail: ".$_POST['email'];
+	$mensaje.= "\nTelefono: ". $_POST['celular'];
+	$mensaje.= "\nAsunto: ". $_POST['asunto'];
+	$mensaje.= "\nMensaje: ".$_POST['mensaje'];
+	$destino= "multiviralbeta@gmail.com";
+	$destino2="vanessa.santillana@ucsp.edu.pe";
+	$destino3="anibal.ventura@ucsp.edu.pe";
+	$remitente = $_POST['email'];
+	$asunto = "Asunto: Contacto Web de Multiviral";
+	mail($destino,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
+	mail($destino3,$asunto,$mensaje,"FROM: $remitente");
+?>
+<?php
+   echo "<script>";
+   echo "alert('Mensaje enviado con exito');";
+   echo "window.location = 'index.php';";
+   echo "</script>";  
+   }
+?>
