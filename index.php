@@ -534,7 +534,7 @@ for ($i=0; $i<$tam; $i++) {
 						<div class="row">
 							<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
 							<div class="price-title" style="text-align: center;">								
-								<p>S/. <strong class="value" id="total_final" >750</strong></p>
+								<p>S/. <strong class="value" id="total_final"></strong></p>
 							</div>							
 							<br>
 							<div id="cf-submit">						 
