@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	
 		$(".bt_plus").each(function (el){	
 			$(this).bind("click",addField);
 	});
@@ -18,7 +17,7 @@ $newClone = $('#div_'+clickID).clone(true);
 $newClone.attr("id",'div_'+newID);
 
 //Asigno nuevo id al primer campo input dentro del div y le borro cualquier valor que tenga asi no copia lo ultimo que hayas escrito.(igual que antes no es necesario tener un id)
-$newClone.children("input").eq(0).attr("id",'servicio'+newID).attr("name",'servicio'+newID).val('');
+$newClone.children("select").eq(0).attr("id",'servicio'+newID).attr("name",'servicio'+newID).val('');
 
 //Borro el valor del segundo campo input(este caso es el campo de cantidad)
 $newClone.children("input").eq(1).attr("id",'costo'+newID).attr("name",'costo'+newID).val('');
