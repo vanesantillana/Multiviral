@@ -10,6 +10,9 @@ SHOW DATABASES;
 //crear BD para prueba
 CREATE DATABASE prueba;
 
+//ingresar a prueba
+use prueba;
+
 //crear tabla para probar
 CREATE TABLE servicios (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -19,7 +22,7 @@ descripcion VARCHAR(50)
 );
 
 //revisar campos creados en la tabla
- DESCRIBE servicios;
+DESCRIBE servicios;
 
 //modificar una columna - descripcion
 ALTER TABLE servicios MODIFY descripcion CHAR(255);

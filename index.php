@@ -1,37 +1,37 @@
 <?php
- $dbhost = 'localhost';
- $dbuser = 'root';
- $dbpass = '123456';
- $dbname = 'prueba';
- ini_set('display_errors', 1);
- error_reporting(E_ALL);
- $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
- header("Content-Type: text/html;charset=utf-8");
-$conn->set_charset("utf8");
+	 $dbhost = 'localhost';
+	 $dbuser = 'root';
+	 $dbpass = '123456';
+	 $dbname = 'prueba';
+	 ini_set('display_errors', 1);
+	 error_reporting(E_ALL);
+	 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
+	 header("Content-Type: text/html;charset=utf-8");
+	$conn->set_charset("utf8");
 
-$query="SELECT * FROM servicios";
-$result = $conn->query($query);
+	$query="SELECT * FROM servicios";
+	$result = $conn->query($query);
 
-$results = array();
-while($row = $result->fetch_row()) {
-  $rows[]=$row;
-}
+	$results = array();
+	while($row = $result->fetch_row()) {
+	  $rows[]=$row;
+	}
 
-function print_array($arr){
-	for ($i=0; $i<count($arr); $i++) {
-		for ($j=0; $j<count($arr[$i]); $j++) {
-			echo $arr[$i][$j];
-			echo " | ";
-		}
-		echo "<br>";
-	} 	
-}
+	function print_array($arr){
+		for ($i=0; $i<count($arr); $i++) {
+			for ($j=0; $j<count($arr[$i]); $j++) {
+				echo $arr[$i][$j];
+				echo " | ";
+			}
+			echo "<br>";
+		} 	
+	}
 
-$servicio=array(array("Selecciona dato","0"));//,array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
-$tam=count($rows);
-for ($i=0; $i<$tam; $i++) {
-	array_push($servicio, array($rows[$i][1],$rows[$i][2]));
-} 
+	$servicio=array(array("Selecciona dato","0"));//,array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+	$tam=count($rows);
+	for ($i=0; $i<$tam; $i++) {
+		array_push($servicio, array($rows[$i][1],$rows[$i][2]));
+	} 
 
 	$tam=count($servicio);
 	$opcion="";
@@ -42,7 +42,7 @@ for ($i=0; $i<$tam; $i++) {
 		$opcion=$opcion.$servicio[$i][0];
 		$opcion=$opcion."</option>";
 	}
-	if (!isset($_POST['email'])) {
+	if (!isset($_POST['email']) && !isset($_POST['email-c'])) {
 ?>
 
 <!DOCTYPE html>
@@ -506,19 +506,19 @@ for ($i=0; $i<$tam; $i++) {
 				<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 						
 							<div class="form-group">
-								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre">
+								<input type="text" placeholder="Nombre" class="form-control" name="nombre-c" id="nombre">
 							</div>
 							<div class="form-group">
-								<input type="email" placeholder="Correo Electronico" class="form-control" name="email" id="email">
+								<input type="email" placeholder="Correo Electronico" class="form-control" name="email-c" id="email">
 							</div>
 							<div class="form-group">
 								<input type="text" placeholder="Nombre de tu Empresa y/o Negocio" class="form-control" name="nombre-empresa" id="nombre-empresa">
 							</div>
 							<div class="form-group">
-								<input type="text" placeholder="Celular" class="form-control" name="celular" id="celular">
+								<input type="text" placeholder="Celular" class="form-control" name="celular-c" id="celular">
 							</div>
 							<div class="form-group">
-								<textarea rows="6" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro"></textarea>	
+								<input type="text" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro">
 							</div>
 						<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
 					</div>
@@ -642,7 +642,7 @@ for ($i=0; $i<$tam; $i++) {
 							<ul>
 								<li><a href="https://www.facebook.com/multiviralbeta" target="_BLANK"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://twitter.com/multiviralbeta?cn=bG9naW5fbm90aWZpY2F0aW9u&refsrc=email" target="_BLANK"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-youtube"></i></a></li>
+								<!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
 							</ul>
 						</div>
 						<!--/. End Footer Social Links -->
