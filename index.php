@@ -1,5 +1,17 @@
 <?php
-    if (!isset($_POST['email'])) {
+
+    
+    $servicio=array(array("Selecciona dato","0"),array("servicio1","20"),array("servicio2","32"),array("servicio3","12"),array("servicio4",19));
+	$tam=count($servicio);
+	$opcion="";
+	for ($i=0; $i<$tam ; $i++) { 
+		$opcion=$opcion."<option value='";
+		$opcion=$opcion.$i;
+		$opcion=$opcion."'>";
+		$opcion=$opcion.$servicio[$i][0];
+		$opcion=$opcion."</option>";
+	}
+	if (!isset($_POST['email'])) {
 ?>
 
 <!DOCTYPE html>
