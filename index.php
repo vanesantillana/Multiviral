@@ -527,11 +527,11 @@
 							</div>
 							<div class="form-group">
 								<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
-								<div class="price-title" style="text-align: center;">								
+								<div class="price-title" style="text-align: center;clear:left ;">								
 									<strong class="value" id="total_final" ></strong>
 								</div>							
 								<br>
-									<a class="cotizar_final btn btn-transparent" id="p3" href="#contacto" style="width: 100%;">Cotizar</a>
+									<a class="cotizar_final btn btn-transparent"  href="#contacto" style="width: 100%;">Cotizar</a>
 								
 							</div>					
 						</div>
