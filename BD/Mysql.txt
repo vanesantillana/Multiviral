@@ -10,6 +10,9 @@ SHOW DATABASES;
 //crear BD para prueba
 CREATE DATABASE prueba;
 
+//ingresar a prueba
+use prueba;
+
 //crear tabla para probar
 CREATE TABLE servicios (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -19,12 +22,32 @@ descripcion VARCHAR(50)
 );
 
 //revisar campos creados en la tabla
- DESCRIBE servicios;
+DESCRIBE servicios;
 
 //modificar una columna - descripcion
 ALTER TABLE servicios MODIFY descripcion CHAR(255);
 
 //insertar datos a la tabla
-INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "diseño web", "380","Diseño de la pagina web de manera eficiente");
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Diseño Web", "300","Creamos páginas web de máxima calidad, creativas y utilizando las técnicas más innovadoras para dar una imagen profesional.");
 
-INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Desarrollo web", "400","Realizamos sistemas exclusivamente para su empresa, adaptándose a la perfección de sus necesidades");
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Responsivo o Adaptable", "60","Tu diseño de página web será adaptable y flexible a cualquier dispositivo móvil o tablet.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Mejorar web ya existente", "250","Nos encargamos de mejorar el rendimiento de las partes más determinantes de tu web.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Panel Administrador", "200","Te ayudamos a no ser dependientes de terceros para manejar el contenido de tu web.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Posicionamiento Web", "60","Llevaremos tu página web a los primeros lugares de los buscadores como Google.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Creación de Logos", "70","Nuestros especialistas en marketing se encargaran de manejar una mejor imagen para tu empresa.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Multi idioma", "50","Ahora tienes la opción de que tu página sea conocida en el extranjero.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Chat en linea", "150","De esta manera será más rápida la comunicación con los visitantes de tu web.");
+
+// Selecciona la tabla servicios
+SELECT * FROM servicios
+
+//Proximamente apps y software
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "APlicaciones Móviles", "400","Tienes una idea de una App, cuéntanos nosotros nos encargamos de hacerlo realidad.");
+
+INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Software a Medida", "380","Desarrollamos sistemas puntuales de acuerdo a las necesidades del cliente utilizando las ultimas tecnologías.");

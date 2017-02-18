@@ -1,15 +1,16 @@
 function calcular_total() {
 	var importe_total = 0;
+	servicios_select=[];
 	$(".importe_linea").each(
 		function(index, value) {
 			if (eval($(this).val())) {
-			importe_total = importe_total + parseInt(servicio[eval($(this).val())][1]);
+				importe_total = importe_total + parseInt(servicio[eval($(this).val())][1]);
+				servicios_select.push(servicio[eval($(this).val())][0]);
 			}
 		}
 	);
-	console.log(importe_total);
 	document.getElementById("total_final").innerHTML=importe_total;
-	
+	$("#total").val(parseInt(importe_total));
 	return importe_total;
 }
 
@@ -19,7 +20,6 @@ function refresh(objeto) {
     document.getElementById("demo"+id).innerHTML = "s/. " + servicio[parseInt(op)][1];
     calcular_total();
 }
-
 
 $(document).ready(function() {
 	document.getElementById("demo1").innerHTML = "s/. " + calcular_total().toString();
@@ -39,13 +39,21 @@ $(document).ready(function() {
 		$("#asunto").val("SOLICITO PAQUETE");
   		$("#mensaje").val("QUIERO TOMAR EL PAQUETE TIENDA VIRTUAL");
 	});
+
+	$(".cotizar_final" ).click(function() {
+		console.log("Imprimiendpo");
+  		for (var i=0; i<servicios_select.length; i++){
+		console.log(servicios_select[i]);
+		}
+	});
+
 });
 
 
 function addField(){
 	var clickID = parseInt($(this).parent('div').attr('id').replace('div_',''));
 	var newID = (clickID+1);
-	$("#total").val(newID);
+	//$("#total").val(newID);
 
 	$newClone = $('#div_'+clickID).clone(true);
 	$newClone.attr("id",'div_'+newID);
@@ -60,6 +68,6 @@ function addField(){
 
 function delRow() {
 	$(this).parent('div').remove();
-	$("#total").val(parseInt($("#total").val())-1);
+	//$("#total").val(parseInt($("#total").val())-1);
 	calcular_total();
 }
