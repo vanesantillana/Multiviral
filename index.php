@@ -517,22 +517,20 @@
 						<!--<input type="text" value="1" id="total" name="total" style="visibility: hidden;">-->
 						
 						<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
+							
 							<div id="div_1" class="form-group">
 					    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 								  		<?php echo $opcion; ?>
 							    	</select>
 				     				<p class="form-control" id="demo1" name="demo" style="width: 20%; float: left; text-align: center;"></p>
-			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 20%; float: left; font-size: 20px; font-weight: bold;"
-			     					/>
-									<br>		
+			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 20%; float: left; font-size: 20px; font-weight: bold;"/>
 							</div>
 							<div class="form-group">
 								<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
-								<div class="price-title" style="text-align: center;">								
+								<div class="price-title" style="text-align: center; clear: left;">								
 									<strong class="value" id="total_final" ></strong>
 								</div>							
-								<br>
-									<a class="cotizar_final btn btn-transparent" id="p3" href="#contacto" style="width: 100%;">Cotizar</a>
+								<a class="cotizar_final btn btn-transparent" id="p3" href="#contacto" style="width: 100%;">Cotizar</a>
 								
 							</div>					
 						</div>
@@ -608,7 +606,7 @@
 							</div>
 							
 							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar" style="border-color: #ED3237;">
+								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar">
 							</div>						
 							
 						</form>
@@ -634,7 +632,7 @@
 							<ul>
 								<li><a href="https://www.facebook.com/multiviralbeta" target="_BLANK"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://twitter.com/multiviralbeta?cn=bG9naW5fbm90aWZpY2F0aW9u&refsrc=email" target="_BLANK"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.youtube.com/channel/UCEoSfMV1wuPEJve1fw6FRAw"><i class="fa fa-youtube"></i></a></li>
+								<li><a href="https://www.youtube.com/channel/UCEoSfMV1wuPEJve1fw6FRAw" target="_BLANK"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
 						<!--/. End Footer Social Links -->
