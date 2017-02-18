@@ -499,27 +499,21 @@
 					
 					<!-- Contact Details -->
 					<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
-						<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+						<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">	
+							<div style="text-align : justify; font-size: 18px;">
+							En esta sección podrás armar tu presupuesto; selecciona solo los servicios que requieras y recibe un presupuesto personalizado y elaborado por ti. Finalmente envia la cotización con todos tus datos, para ponernos en contacto contigo.
+							</div>
+							<br>
+							<center>
+								<img id="ini" src="img/parallax/hombrecito.png"/>
+							</center>	
+							
+
+						</div>		
+						<!--<input type="text" value="1" id="total" name="total" style="visibility: hidden;">-->
 						
-							<div class="form-group">
-								<input type="text" placeholder="Nombre" class="form-control" name="nombre-c" id="nombre" required>
-							</div>
-							<div class="form-group">
-								<input type="email" placeholder="Correo Electronico" class="form-control" name="email-c" id="email" required>
-							</div>
-							<div class="form-group">
-								<input type="text" placeholder="Nombre de tu Empresa y/o Negocio" class="form-control" name="nombre-empresa" id="nombre-empresa">
-							</div>
-							<div class="form-group">
-								<input type="text" placeholder="Celular" class="form-control" name="celular-c" id="celular" required>
-							</div>
-							<div class="form-group">
-								<input type="text" placeholder="Rubro y/o ocupacion de la Empresa" class="form-control" name="rubro" id="rubro">
-							</div>
-							<input type="text" value="1" id="total" name="total" style="visibility: hidden;">
-						</div>
 						<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">			
-							<div id="div_1" class="row">
+							<div id="div_1" class="form-group">
 					    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 								  		<?php echo $opcion; ?>
 							    	</select>
@@ -527,14 +521,14 @@
 			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
 									<br>		
 							</div>
-							<div class="row">
+							<div class="form-group">
 								<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
 								<div class="price-title" style="text-align: center;">								
 									<p>S/. <strong class="value" id="total_final" ></strong></p>
 								</div>							
 								<br>
 								<div id="cf-submit">						 
-									<input type="submit" id="contact-submit" class="cotizar_final btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+									<input type="submit" id="contact-submit" class="cotizar_final btn btn-transparent" name="servicios_sel" value="Enviar cotización" style="border-color: #ED3237">
 								</div>
 							</div>					
 						</div>
@@ -586,7 +580,7 @@
 							</div>
 
 							<div class="form-group">
-								<input type="celular" placeholder="Celular" class="form-control" name="celular" id="celular" required>
+								<input type="tel" placeholder="Celular" class="form-control" name="celular" id="celular" required>
 							</div>
 							
 							<div class="form-group">
@@ -730,7 +724,6 @@ function bu1() {
 
 <?php
 }else{
-	
 	$mensaje="Cliente de MULTIVIRAL";
 	$mensaje.= "\nNombre: ". $_POST['nombre'];
 	$mensaje.= "\nEmail: ".$_POST['email'];
@@ -738,28 +731,15 @@ function bu1() {
 	$mensaje.= "\nAsunto: ". $_POST['asunto'];
 	$mensaje.= "\nMensaje: ".$_POST['mensaje'];
 
-	$cotizacion="Cliente de MULTIVIRAL con Presupuesto";
-	$cotizacion.= "\nNombre : ". $_POST['nombre-c'];
-	$cotizacion.= "\nEmail : ".$_POST['email-c'];
-	$cotizacion.= "\nNombre de la Empresa/Negocio : ". $_POST['nombre-empresa'];
-	$cotizacion.= "\nTelefono : ". $_POST['celular-c'];
-	$cotizacion.= "\nRubro : ". $_POST['rubro'];
-	$cotizacion.= "\nTotal : ". $_POST['total'];
-
 	$destino= "multiviralbeta@gmail.com";
 	$destino2="vanessa.santillana@ucsp.edu.pe";
 	$destino3="anibal.ventura@ucsp.edu.pe";
 	$remitente = $_POST['email'];
-	$remitente_c = $_POST['email-c'];
 
 	$asunto = "Asunto: CONTACTO WEB DE MULTIVIRAL";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino3,$asunto,$mensaje,"FROM: $remitente");
-	mail($destino,$asunto,$cotizacion,"FROM: $remitente_c");
-	mail($destino2,$asunto,$cotizacion,"FROM: $remitente_c");
-	mail($destino3,$asunto,$cotizacion,"FROM: $remitente_c");
-?>
 ?>
 <?php
    echo "<script>";
