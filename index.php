@@ -325,18 +325,7 @@
 					</div>
 
 					<div class="row">
-					<!-- Single Service Item -->
-					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
-						<div class="service-block text-center">
-							<div class="service-icon text-center">
-								<i class="fa fa-android fa-5x"></i>
-							</div>
-							<h3>Desarrollo de APPS Móviles</h3>
-							<p>Tienes una idea de una App, cuéntanos nosotros nos encargamos de hacerlo realidad en sistemas operativos como Android y IOS.</p>
-						</div>
-					</article>
-					<!-- End Single Service Item -->
-
+					
 					<!-- Single Service Item -->
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="400ms">
 						<div class="service-block text-center">
@@ -360,6 +349,19 @@
 						</div>
 					</article>
 					<!-- End Single Service Item -->
+
+					<!-- Single Service Item -->
+					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="200ms">
+						<div class="service-block text-center">
+							<div class="service-icon text-center">
+								<i class="fa fa-android fa-5x"></i>
+							</div>
+							<h3>Desarrollo de APPS Móviles</h3>
+							<p>Tienes una idea de una App, cuéntanos nosotros nos encargamos de hacerlo realidad en sistemas operativos como Android y IOS.</p>
+						</div>
+					</article>
+					<!-- End Single Service Item -->
+
 					</div>
 						
 				</div> 		<!-- End row -->
@@ -647,7 +649,7 @@
 							
 							<p>Diseñado y desarrollado <a href="https://www.facebook.com/multiviralbeta"> MultiViral</a>. Copyright &copy; 2017. Todos los derechos reservados.</p>
 							
-					<p style="float: right;">Visitante:
+					<p style="float: left;">Visitante:
  					<?php echo " <span style='color:white;' class='views'>".$total."</span>"; ?>
 					</p>
 				
