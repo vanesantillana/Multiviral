@@ -286,9 +286,7 @@
 						</div>
 					</article>
 					<!-- End Single Service Item -->
-					</div>
-
-					<div class="row">
+					
 					<!-- Single Service Item -->
 					<article class="col-md-4 col-sm-6 col-xs-12 wow fadeInDown" data-wow-duration="500ms" data-wow-delay="200ms">
 						<div class="service-block text-center">

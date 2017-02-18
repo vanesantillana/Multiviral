@@ -299,7 +299,6 @@ h1, h2, h3, h4, h5, h6 {
 		 -o-transition: background .5s ease-in-out 0s;
 			transition: background .5s ease-in-out 0s;
 }
-
 .navbar-inverse .navbar-nav > li.current > a {
     color: #ED3237;
     background-color: #2f3238;
