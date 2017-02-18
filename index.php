@@ -623,7 +623,7 @@
 							<ul>
 								<li><a href="https://www.facebook.com/multiviralbeta" target="_BLANK"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://twitter.com/multiviralbeta?cn=bG9naW5fbm90aWZpY2F0aW9u&refsrc=email" target="_BLANK"><i class="fa fa-twitter"></i></a></li>
-								<!--<li><a href="#"><i class="fa fa-youtube"></i></a></li>-->
+								<li><a href="https://www.youtube.com/channel/UCEoSfMV1wuPEJve1fw6FRAw"><i class="fa fa-youtube"></i></a></li>
 							</ul>
 						</div>
 						<!--/. End Footer Social Links -->
