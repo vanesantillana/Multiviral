@@ -500,7 +500,7 @@
 					<!-- Contact Details -->
 					<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
 						<div class="contact-form col-md-6 wow fadeInUp" style="" data-wow-duration="500ms" data-wow-delay="300ms">	
-							<div style="text-align : justify; font-size: 18px;">
+							<div style="text-align : justify; font-size: 16px;">
 							En esta sección podrás armar tu presupuesto; selecciona solo los servicios que requieras y recibe un presupuesto personalizado y elaborado por ti. Finalmente envia la cotización con todos tus datos, para ponernos en contacto contigo.
 							</div>
 							<br>
