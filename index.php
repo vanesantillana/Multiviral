@@ -122,7 +122,6 @@
 				<img  id="ini" src="img/logo/logo_sm.png"/>
 			</div>
 		</div>
-		
         <!--
         End Preloader
         ==================================== -->
