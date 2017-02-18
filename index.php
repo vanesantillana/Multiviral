@@ -527,10 +527,13 @@
 							</div>
 							<div class="form-group">
 								<!--<span>Total: <input class="form-control" readonly="readonly" type="text" id="total_final" value="0"/></span>-->
-								<div class="price-title" style="text-align: center; clear: left;">								
+
+								<div class="price-title" style="text-align: center;clear:left ;">								
 									<strong class="value" id="total_final" ></strong>
 								</div>							
-								<a class="cotizar_final btn btn-transparent" id="p3" href="#contacto" style="width: 100%;">Cotizar</a>
+								<br>
+									<a class="cotizar_final btn btn-transparent"  href="#contacto" style="width: 100%;">Cotizar</a>
+
 								
 							</div>					
 						</div>
@@ -618,7 +621,7 @@
 		
 	</section>
 
-
+<?php include 'contador.php'; ?>
 		<!-- end Contact Area
 		========================================== -->
 		
@@ -640,14 +643,18 @@
 						<!-- copyright -->
 						<div class="copyright text-center">
 							<a href="index.html">
-								<!--	
-								<img src="img/logo-meghna.png" alt="Meghna" /> 
-								-->
 								<h1 style="font-family: 'astera';"> MultiViral</h1>
 							</a>
 							<br />
 							
 							<p>Diseñado y desarrollado <a href="https://www.facebook.com/multiviralbeta"> MultiViral</a>. Copyright &copy; 2017. Todos los derechos reservados.</p>
+							
+					<p style="float: right;">Visitante:
+ 					<?php echo " <span style='color:white;' class='views'>".$total."</span>"; ?>
+					</p>
+				
+
+
 						</div>
 						<!-- /copyright -->
 						
@@ -715,11 +722,19 @@ function bu1() {
   $( "#ini" ).fadeOut( 500 ).delay( 100 ).fadeIn( 500 );
   bu2();
 }
-  function bu2(){
-  	bu1();
-  }
-  bu2();
+  setInterval("bu1()", 10);
 </script>
+	<script>	
+		// Hacemos la Function para abrir el contador de visitas
+	function recargar_views(){
+	    $(".views").load("./contador.txt");
+	}
+
+	// Establecemos el temporizador a 1 segundos
+	timer = setInterval("recargar_views()", 1000);
+
+	</script>
+
 
     </body>
 </html>
