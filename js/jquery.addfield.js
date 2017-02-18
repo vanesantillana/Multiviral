@@ -1,15 +1,16 @@
 function calcular_total() {
 	var importe_total = 0;
+	servicios_select=[];
 	$(".importe_linea").each(
 		function(index, value) {
 			if (eval($(this).val())) {
-			importe_total = importe_total + parseInt(servicio[eval($(this).val())][1]);
-			servicios_select.push(servicio[eval($(this).val())][0]);
+				importe_total = importe_total + parseInt(servicio[eval($(this).val())][1]);
+				servicios_select.push(servicio[eval($(this).val())][0]);
 			}
 		}
 	);
 	document.getElementById("total_final").innerHTML=importe_total;
-	$("#total").val(parseInt(importe_total);
+	$("#total").val(parseInt(importe_total));
 	return importe_total;
 }
 
@@ -26,8 +27,21 @@ $(document).ready(function() {
 		$(this).bind("click",addField);
 	});
 
+	$( "#p1" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE BASICO");
+	});
+	$( "#p2" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE NEGOCIO");
+	});
+	$( "#p3" ).click(function() {
+		$("#asunto").val("SOLICITO PAQUETE");
+  		$("#mensaje").val("QUIERO TOMAR EL PAQUETE TIENDA VIRTUAL");
+	});
+
 	$(".cotizar_final" ).click(function() {
-		console.log("entree");
+		console.log("Imprimiendpo");
   		for (var i=0; i<servicios_select.length; i++){
 		console.log(servicios_select[i]);
 		}

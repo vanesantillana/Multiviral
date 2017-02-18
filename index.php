@@ -100,13 +100,7 @@
 		<script type="text/javascript">
     		var servicio=<?php echo json_encode($servicio);?>;
     		var servicios_select = new Array();
-/*    var opcion="";
-    for (var i=0; i<servicio.length; i++) { 		 
-		opcion=opcion+"<option value=";
-		opcion=opcion+"1";
-		opcion=opcion+servicio[i][0];
-		opcion=opcion+"</option>";
-	}*/
+
  		</script>
  		<style>
  			.prueba {background-color: #333;
@@ -408,7 +402,7 @@
 								<p>S/.<strong class="value">350</strong> </p>
 							</div>
 							<!-- Solicitar button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p1" href="#contacto">Solicitar</a>
 							<!-- /signup button -->
 							
 						</div>
@@ -442,7 +436,7 @@
 							<!-- /plan description -->
 							
 							<!-- signup button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p2" href="#contacto">Solicitar</a>
 							<!-- /signup button -->
 							
 						</div>
@@ -475,7 +469,7 @@
 								<p>S/. <strong class="value">750</strong></p>
 							</div>							
 							<!-- signup button -->
-							<a class="btn btn-transparent" href="#">Solicitar</a>
+							<a class="btn btn-transparent" id="p3" href="#contacto">Solicitar</a>
 							<!-- /Solicitar button -->
 							
 						</div>
@@ -540,18 +534,14 @@
 								</div>							
 								<br>
 								<div id="cf-submit">						 
-									<input type="submit" id="cotizar_final" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+									<input type="submit" id="contact-submit" class="cotizar_final btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
 								</div>
 							</div>					
 						</div>
 				</form>
-		
-				
-				</div> <!-- end row -->
-			</div> <!-- end container -->
-		
-			
-		</section> <!-- end section -->
+				</div>
+			</div> 
+		</section> 
 		
 	<section id="contacto" class="parallax-section">
 				<div class="container">
