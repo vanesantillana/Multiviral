@@ -522,8 +522,9 @@
 					    			<select class="importe_linea form-control" style="width: 60%; float: left;" value="" id="servicio1" name="servicio1" onchange="refresh(this)">
 								  		<?php echo $opcion; ?>
 							    	</select>
-				     				<p class="form-control" id="demo1" name="demo" style="width: 30%; float: left; text-align: center;"></p>
-			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 10%; float: left;" />
+				     				<p class="form-control" id="demo1" name="demo" style="width: 20%; float: left; text-align: center;"></p>
+			     					<input class="form-control bt_plus" id="1" type="button" value="+" style="width: 20%; float: left; font-size: 20px; font-weight: bold;"
+			     					/>
 									<br>		
 							</div>
 							<div class="form-group">
