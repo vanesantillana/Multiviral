@@ -52,9 +52,9 @@
 <html>
     <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="description" content="MultiViral soluciones informaticas desarrolla paginas web y software en general.">
+        <meta name="description" content="DISEÑO WEB AREQUIPA, paginas web arequipa, diseño responsivo, paginas web Multiviral Páginas web arequipa, diseño web arequipa, pagina web. MultiViral pagina web Arequipa Perú. Soluciones informáticas, desarrolla paginas web y software en general.">
         <meta name="author" content="MultiViral">
-        <title>MultiViral - Soluciones informaticas</title>
+        <title>Diseño web Arequipa, desarrollo de paginas web Arequipa - MULTIVIRAL</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="img/logo/logo_pestaña.png" />
 		
