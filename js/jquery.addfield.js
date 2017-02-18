@@ -5,11 +5,11 @@ function calcular_total() {
 		function(index, value) {
 			if (eval($(this).val())) {
 				importe_total = importe_total + parseInt(servicio[eval($(this).val())][1]);
-				servicios_select.push(servicio[eval($(this).val())][0]);
+				servicios_select.push(servicio[eval($(this).val())][0]+ ' - S/.' + servicio[eval($(this).val())][1]);
 			}
 		}
 	);
-	document.getElementById("total_final").innerHTML=importe_total;
+	document.getElementById("total_final").innerHTML='s/.'+importe_total;
 	$("#total").val(parseInt(importe_total));
 	return importe_total;
 }
@@ -41,10 +41,14 @@ $(document).ready(function() {
 	});
 
 	$(".cotizar_final" ).click(function() {
-		console.log("Imprimiendpo");
+		var cotizacion="Quiero cotizar lo siguiente:\n";
   		for (var i=0; i<servicios_select.length; i++){
-		console.log(servicios_select[i]);
+			cotizacion=cotizacion+servicios_select[i]+"\n";
 		}
+  		var t_coti = calcular_total();
+  		$("#asunto").val("COTIZACIÓN ONLINE");
+  		cotizacion=cotizacion+"Total: s/."+t_coti.toString();
+		$("#mensaje").val(cotizacion);
 	});
 
 });
