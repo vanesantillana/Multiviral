@@ -9,7 +9,7 @@ function calcular_total() {
 		}
 	);
 	document.getElementById("total_final").innerHTML=importe_total;
-	$("#total").val(parseInt(importe_total);
+	$("#total").val(parseInt(importe_total));
 	return importe_total;
 }
 

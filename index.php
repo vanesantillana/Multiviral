@@ -540,7 +540,7 @@
 								</div>							
 								<br>
 								<div id="cf-submit">						 
-									<input type="submit" id="cotizar_final" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
+									<input type="submit" id="contact-submit" class="btn btn-transparent" value="Enviar cotización" style="border-color: #ED3237">
 								</div>
 							</div>					
 						</div>
@@ -740,7 +740,6 @@ function bu1() {
 
 <?php
 }else{
-	
 	$mensaje="Cliente de MULTIVIRAL";
 	$mensaje.= "\nNombre: ". $_POST['nombre'];
 	$mensaje.= "\nEmail: ".$_POST['email'];
@@ -754,7 +753,7 @@ function bu1() {
 	$cotizacion.= "\nNombre de la Empresa/Negocio : ". $_POST['nombre-empresa'];
 	$cotizacion.= "\nTelefono : ". $_POST['celular-c'];
 	$cotizacion.= "\nRubro : ". $_POST['rubro'];
-	$cotizacion.= "\nTotal : ". $_POST['total'];
+	//$cotizacion.= "\nServicios :". ;
 
 	$destino= "multiviralbeta@gmail.com";
 	$destino2="vanessa.santillana@ucsp.edu.pe";
