@@ -1,17 +1,36 @@
- @font-face {
-    font-family: 'astera';
-    src: url('../fonts/astera.ttf?v=4.1.0');
-    src: local(‘☺’), url('../fonts/astera.ttf?v=4.1.0') format('truetype');
-    font-weight: normal;
-    font-style: normal;
+                                /*
+Template Name: Meghna Responsive HTML5/CSS3 Portfolio Template
+Author: Muhammad Morshed
+Author URI: http://themeforest.net/user/morsheds
+Description: Meghna Responsive HTML5/CSS3 Portfolio Template
+Version: 1.0
+Tags: one-page, single-page, portfolio, custom-colors, post-formats, responsive, html5, css3
+*/
 
-}
+
+/* Table of Content
+==================================================
+	#Home
+	#Navigation
+	#About
+	#Service
+	#Portfolio
+	#Our Team
+	#Pricing
+	#Blog
+	#Contact
+*/
+
+
+/*=================================================================
+	Basic Setup
+==================================================================*/
 
 body {
     background-color: #2B2C30;
 	font-family: 'Ubuntu', 'Arial', sans-serif;
     line-height: 1.5;
-    color: white;
+    color: #ddd;
 }
 
 ol, ul {
@@ -43,7 +62,7 @@ a, a:focus, a:hover {
 }
 
 a:focus, a:hover {
-    color: #ED3237;
+    color: #6CB670;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-green {
-    background-color: #ED3237;
+    background-color: #6cb670;
 }
 
 .btn-green:focus, 
@@ -88,11 +107,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-transparent:focus {
     background-color: transparent;
-    border-color: #ED3237;
+    border-color: #6cb670;
 }
 
 .btn-transparent:hover {
-    background-color: #ED3237;
+    background-color: #6cb670;
 	border: 1px solid transparent;
     color: #fff;
 }
@@ -102,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 0;
 	padding: 5px 10px;
 	border: 0 none;
-	color: white;
+	color: #ddd;
 }
 
 .form-control:focus {
@@ -143,7 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     left: 0;
     position: fixed;
-    top: 19%;
+    top: 50%;
     width: 100%;
 }
 
@@ -179,7 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .color {
-    color: #ED3237;
+    color: #6CB670;
 }
 
 .sub-title {
@@ -216,10 +235,6 @@ h1, h2, h3, h4, h5, h6 {
 
 #home {
     position: relative;
-}
-
-#home h2{
-	font-family: 'astera';
 }
 
 #slitSlider .carousel-caption {
@@ -284,8 +299,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar-brand h1 {
 	margin: 0;
-	font-family: 'astera';
-	color: white;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -299,13 +312,14 @@ h1, h2, h3, h4, h5, h6 {
 		 -o-transition: background .5s ease-in-out 0s;
 			transition: background .5s ease-in-out 0s;
 }
+
 .navbar-inverse .navbar-nav > li.current > a {
-    color: #ED3237;
+    color: #6cb670;
     background-color: #2f3238;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #ff383f;
+    color: #6cb670;
 }
 
 
@@ -435,14 +449,14 @@ h1, h2, h3, h4, h5, h6 {
 
 
 /*=================================================================
-	servicio section
+	Services section
 ==================================================================*/
 
-#servicio {
+#services {
     padding: 70px 0 100px;
 }
 
-#servicio .title {
+#services .title {
     padding-bottom: 125px;
 }
 
@@ -772,7 +786,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mask ul li a:hover {
-    background-color: #ED3237;
+    background-color: #6cb670;
     border: 1px solid transparent;
 }
 
@@ -788,9 +802,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .twitter-bird span {
-    border: 2px solid #ED3237;
+    border: 2px solid #6cb670;
     border-radius: 50px;
-    color: #ED3237;
+    color: #6cb670;
     display: inline-block;
     margin-bottom: 50px;
     height: 90px;
@@ -806,7 +820,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tweet a {
-    color: #ED3237;
+    color: #6cb670;
 }
 
 /*=================================================================
@@ -827,7 +841,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .price-title > h3 {
-    color: #FFF;
+    color: #6cb670;
     font-family: Oswald;
     font-weight: 700;
     margin: 0 0 10px;
@@ -841,7 +855,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .price-title .value {
-	color: #808080;
+	color: #6cb670;
 	font-size: 30px;
 }
 
@@ -870,24 +884,14 @@ h1, h2, h3, h4, h5, h6 {
 	Testimonial section
 ==================================================================*/
 
-#paquete{
-    background-image: url(../img/parallax/portada2.jpg);
+#testimonial {
+    background-image: url(../img/parallax/bicycle.jpg);
     padding: 70px 0;
 }
 
-#paquete .owl-wrapper-outer {
+#testimonials .owl-wrapper-outer {
   top: -25px;
 }
-
-#contacto{
-    background-image: url(../img/parallax/portada2.jpg);
-    padding: 70px 0;
-}
-
-#contacto .owl-wrapper-outer {
-  top: -25px;
-}
-
 
 .client-info {
   margin: 0 auto;
@@ -939,7 +943,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-profile li a:hover {
-	color: #ED3237;
+	color: #6CB670;
 }
 
 .owl-pagination,
@@ -965,7 +969,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .owl-controls .owl-page.active span,
 .owl-controls .owl-page:hover span {
-    background-color: #ED3237;
+    background-color: #6cb670;
     border: 2px solid transparent;
 }
 
@@ -1040,7 +1044,7 @@ h1, h2, h3, h4, h5, h6 {
 	Contact
 ==================================================================*/
 
-#cotizacion {
+#contact-us {
     padding: 70px 0 0;
 }
 
@@ -1057,7 +1061,7 @@ h1, h2, h3, h4, h5, h6 {
 .contact-form input:hover, 
 .contact-form textarea:hover,
 #contact-submit:hover {
-    border-color: white;
+    border-color: #6CB670;
 }
 
 #contact-submit {
@@ -1099,7 +1103,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .success {
-    background-color: #ED3237;
+    background-color: #6cb670;
     border-radius: 4px;
     color: #fff;
     display: none;
@@ -1171,7 +1175,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-icon > ul > li:hover a {
-    background-color: #ED3237;
+    background-color: #6CB670;
 	
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
@@ -1213,8 +1217,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #scrollUp:hover {
-    background-color: #ED3237;
-    border: 1px solid #ED3237;
+    background-color: #6cb670;
+    border: 1px solid #6cb670;
 }
 
 
