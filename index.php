@@ -642,7 +642,7 @@
 
 						<!-- copyright -->
 						<div class="copyright text-center">
-							<a href="index.html">
+							<a href="index.php">
 								<h1 style="font-family: 'astera';"> MultiViral</h1>
 							</a>
 							<br />
