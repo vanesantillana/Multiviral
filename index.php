@@ -4,6 +4,11 @@
 	 $dbuser = 'root';
 	 $dbpass = '123456';
 	 $dbname = 'prueba';
+	 /*
+	 $dbhost = 'mysql.hostinger.es';
+	 $dbuser = 'u478270140_root';
+	 $dbpass = 'HelloWorld8';
+	 $dbname = 'u478270140_servi';*/
 	 ini_set('display_errors', 1);
 	 error_reporting(E_ALL);
 	 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
@@ -400,7 +405,7 @@
 								<li>Diseño web personalizado</li>
 								<li>Visualización en dispositivos móviles, smartphones, tablets</li>
 								<li>Integracion con redes sociales</li>
-								<li>Dominio Gratis (Depende de la disponibilidad)</li>
+								
 							</ul>
 							<div class="price-title">								
 								<p>S/.<strong class="value">350</strong> </p>
@@ -428,7 +433,7 @@
 								<li>Diseño web personalizado</li>
 								<li>Visualización en dispositivos móviles, smartphones, tablets</li>
 								<li>Integracion con redes sociales</li>
-								<li>Dominio Gratis (Depende de la disponibilidad)</li>
+								
 								<li>Administrador de contenidos</li>
 								<li>Configuracion de Base de Datos</li>
 								<li>Soporte multi idioma</li>
@@ -462,7 +467,7 @@
 								<li>Diseño web personalizado</li>
 								<li>Visualización en dispositivos móviles, smartphones, tablets</li>
 								<li>Integracion con redes sociales</li>
-								<li>Dominio Gratis (Depende de la disponibilidad)</li>
+								
 								<li>Administrador de contenidos</li>
 								<li>Configuracion de Base de Datos</li>
 								<li>Soporte multi idioma</li>
@@ -716,13 +721,13 @@
 		<!-- Grid js -->
 		<script src="js/grid.js"></script>
 		<!-- Custom js -->
-		<script src="js/custom.js"></script>
+		<script src="js/custommulti.js"></script>
 		<script>
-function bu1() {
+/*function bu1() {
   $( "#ini" ).fadeOut( 500 ).delay( 100 ).fadeIn( 500 );
   bu2();
 }
-  setInterval("bu1()", 10);
+  setInterval("bu1()", 10);*/
 </script>
 	<script>	
 		// Hacemos la Function para abrir el contador de visitas

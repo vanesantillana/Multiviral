@@ -1,0 +1,467 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"b",
+				"BLOCK_WIDTH"
+			],
+			[
+				"def",
+				"define"
+			],
+			[
+				"h",
+				"h_C"
+			],
+			[
+				"n",
+				"n"
+			],
+			[
+				"d_",
+				"d_P"
+			],
+			[
+				"r",
+				"row"
+			],
+			[
+				"tr",
+				"throw"
+			],
+			[
+				"st",
+				"style\tTag"
+			],
+			[
+				"ali",
+				"text-align"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"T",
+				"Token"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"text-a",
+				"text-align"
+			],
+			[
+				"E",
+				"Evaluation"
+			],
+			[
+				"tok",
+				"tokenlimit"
+			],
+			[
+				"tl",
+				"tl"
+			],
+			[
+				"U",
+				"Update"
+			],
+			[
+				"N",
+				"NULL"
+			],
+			[
+				"is",
+				"isTerminal"
+			],
+			[
+				"move",
+				"move"
+			],
+			[
+				"UC",
+				"UCT"
+			],
+			[
+				"m",
+				"memory_order_seq_cst"
+			],
+			[
+				"do",
+				"double"
+			],
+			[
+				"in",
+				"index"
+			],
+			[
+				"s",
+				"store"
+			],
+			[
+				"i",
+				"isexpandable"
+			],
+			[
+				"mov",
+				"moves"
+			],
+			[
+				"re",
+				"return"
+			],
+			[
+				"I",
+				"Init"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"rg",
+				"rgbToGray"
+			],
+			[
+				"gra",
+				"grayImage"
+			],
+			[
+				"g",
+				"g"
+			],
+			[
+				"rgb",
+				"rgbImage"
+			],
+			[
+				"C",
+				"CHANNELS"
+			],
+			[
+				"print",
+				"printMatrix"
+			],
+			[
+				"h_",
+				"h_B"
+			],
+			[
+				"for",
+				"formularios"
+			],
+			[
+				"ins",
+				"inserts"
+			],
+			[
+				"INI",
+				"ini_vect"
+			],
+			[
+				"ini",
+				"ini_matrix"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 153.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/html/multiviral/multi/index.php",
+		"/home/vane/Descargas/pruebaseguridad/PHISHING.html",
+		"/home/vane/Documentos/Paralelos/lab/CUDAMulMatrix/mulMatrix.c",
+		"/var/www/html/multiviral/multi/js/custommulti.js",
+		"/var/www/html/multiviral/multi/.htaccess",
+		"/var/www/html/multiviral/multi/js/custom.js",
+		"/var/www/html/reforzamiento/admin/index.html",
+		"/var/www/html/reforzamiento/admin/pages-profile.html",
+		"/home/vane/Documentos/Paralelos/lab/CUDA/matrizVector.cu",
+		"/var/www/html/seguridad/verif.php",
+		"/home/vane/Documentos/Paralelos/lab/CUDAMulMatrix/mulMatrix.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDA/sumaVector.cu",
+		"/var/www/html/reforzamiento/index.php",
+		"/var/www/html/seguridad/index.html",
+		"/home/vane/Documentos/lp/try.c",
+		"/var/www/html/reforzamiento1/index.php",
+		"/home/vane/Documentos/Paralelos/lab/CUDAMulMatrix/matrixmul.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAMulMatrix/prub.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDAMulMatrix/matrixmul.c",
+		"/var/www/html/reforzamiento/README.md",
+		"/home/vane/Descargas/pishing/paypal/verif.php",
+		"/home/vane/Documentos/Paralelos/ceil.cpp",
+		"/var/www/html/index.html",
+		"/home/vane/Documentos/Paralelos/lab/OPENMP/countsort.c",
+		"/home/vane/Documentos/Paralelos/lab/OPENMP/estimatePi.c",
+		"/home/vane/Documentos/Paralelos/fordoble.c",
+		"/var/www/html/reforzamiento/details.html",
+		"/var/www/html/reforzamiento/style.css",
+		"/var/www/html/reforzamiento/index.html",
+		"/var/www/html/templates/index.html",
+		"/var/www/html/templates/go easy/gallery.html",
+		"/home/vane/Documentos/Paralelos/PAPERS/3pmcts.cpp",
+		"/home/vane/Documentos/Paralelos/lab/3PMCTS/3pmcts.cpp",
+		"/home/vane/Documentos/Paralelos/PAPERS/prub.cpp",
+		"/var/www/html/reforzamiento/.idea/workspace.xml",
+		"/var/www/html/reforzamiento/web/index.html",
+		"/var/www/html/reforzamiento/web/css/style.css",
+		"/var/www/html/reforzamiento/admin/profile.html",
+		"/var/www/html/reforzamiento/admin/basic-table.html",
+		"/var/www/html/reforzamiento/platz/index.html",
+		"/var/www/html/reforzamiento/platz/style.css",
+		"/home/vane/Descargas/codfacilito/CódigoFacilito - Aprende a Programar desde tu casa hoy.html",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/CalculoPi.c",
+		"/home/vane/Documentos/Paralelos/PAPERS/3pmcts.c",
+		"/home/vane/Documentos/Paralelos/2image.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/imagen.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/graylode.cu",
+		"/home/vane/Descargas/opencv/opencv-master/modules/highgui/include/opencv2/highgui.hpp",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/grayscale.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/blurscale.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/lode/blur.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/inverse.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/lode/blur.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/lodepng.h",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/lodepng.cu",
+		"/home/vane/Descargas/opencv/opencv-master/modules/imgproc/include/opencv2/imgproc.hpp",
+		"/home/vane/Descargas/opencv/opencv-master/modules/imgproc/include/opencv2/imgproc/imgproc.hpp",
+		"/var/www/html/xss/formularioSeguro.php",
+		"/home/vane/Documentos/Paralelos/gray.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/grayscale.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDAImage/blurscale.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDA/sumaMatriz.cu",
+		"/home/vane/Documentos/Paralelos/gray.cu",
+		"/home/vane/Documentos/Paralelos/gray.cuda",
+		"/home/vane/Documentos/Paralelos/sumv.cu",
+		"/home/vane/Documentos/Paralelos/lab/CUDA/matrizVector.c",
+		"/home/vane/Documentos/Paralelos/lab/CUDA/sumaMatriz.c",
+		"/home/vane/Documentos/Paralelos/lab/OPENMP/helloworld.c",
+		"/home/vane/Documentos/Paralelos/lab/OPENMP/histogram.c",
+		"/home/vane/Documentos/Paralelos/lab/OPENMP/histogramCap5.c",
+		"/home/vane/Documentos/HCI/SerialGames/2 parte/summary.txt",
+		"/home/vane/Documentos/HCI/SerialGames/2parte.txt",
+		"/home/vane/Documentos/Paralelos/html/formularioSeguro.html",
+		"/home/vane/Documentos/Paralelos/ipp-source-use/ch5/omp_hello.c",
+		"/home/vane/Escritorio/error.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/strtok.c",
+		"/home/vane/Documentos/Paralelos/lab/MPI/scatter.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/OneMutexNode-PThread.c",
+		"/home/vane/Documentos/Paralelos/average.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/MatrixVector-Pthreads.c",
+		"/home/vane/Documentos/Paralelos/lab/MPI/MPIMatrizVector.cpp",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/MutexEntireList-PThread.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/ReadWriteList-PThread.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/prub.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/pthreads.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/nth.cpp",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/dan.c",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/prueba.c",
+		"/home/vane/Escritorio/Mantenimiento.sh",
+		"/home/vane/Escritorio/MantenimientoBD.sh",
+		"/home/vane/Documentos/Paralelos/lab/PThreads/nth.c",
+		"/home/vane/Documentos/Paralelos/lab/MPI/MPIMultMatrix.c",
+		"/home/vane/Documentos/Paralelos/lab/MPI/MPIMatrizVector.c",
+		"/home/vane/Documentos/BDII/bd.sql",
+		"/home/vane/Documentos/Paralelos/lab/MPI/ejercicios.c",
+		"/home/vane/Descargas/bd.sql"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Files",
+			"custom",
+			"message",
+			"subject",
+			"name",
+			". ",
+			"2. __shared__",
+			". ",
+			".",
+			"__shared__",
+			"matMult",
+			"Width",
+			"nombr",
+			">\n",
+			"}",
+			"h1",
+			"Reforzamiento",
+			"token",
+			"std",
+			"atomic",
+			"std::atomic",
+			"std::",
+			"std",
+			"utility",
+			"imageData",
+			"buff",
+			"c",
+			"local_sum",
+			"startval",
+			"world_size",
+			"world_rank",
+			"head_p->mutex",
+			"head_p_mutex",
+			"rwlock",
+			"temo_p",
+			"deletes",
+			"inserts",
+			"members",
+			"matrix",
+			"COLUMNS",
+			"ROWS",
+			"t2",
+			"t1"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
