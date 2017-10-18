@@ -423,7 +423,7 @@
 								<li>Dominio Gratis (Depende de la disponibilidad)</li>
 								<li>Administrador de contenidos</li>
 								<li>Configuracion de Base de Datos</li>
-								<li>Soporte multi idioma</li>
+								
 
 							</ul>
 							<div class="price-title">								
@@ -462,7 +462,7 @@
 								<li>Carrito de compras</li>
 							</ul>
 							<div class="price-title">								
-								<p>S/. <strong class="value">1150</strong></p>
+								<p>S/. <strong class="value">1250</strong></p>
 							</div>							
 							<!-- signup button -->
 							<a class="btn btn-transparent" id="p3" href="#contacto">Solicitar</a>
@@ -563,7 +563,13 @@
 							<div class="con-info clearfix">
 								<i class="fa fa-envelope fa-lg"></i>
 								<span>Email: multiviralbeta@gmail.com</span>
+							</div>
+							<div class="con-info clearfix">
+								<i class="fa fa-envelope fa-lg"></i>
 								<span>Email: ignacio@multiviralperu.com</span>
+							</div>
+							<div class="con-info clearfix">
+								<i class="fa fa-envelope fa-lg"></i>
 								<span>Email: vanessa@multiviralperu.com</span>
 							</div>
 						</div>
