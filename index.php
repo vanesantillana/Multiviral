@@ -1,14 +1,7 @@
 <?php
 
-	 $dbhost = 'localhost';
-	 $dbuser = 'root';
-	 $dbpass = '123456';
-	 $dbname = 'prueba';
-	 ini_set('display_errors', 1);
-	 error_reporting(E_ALL);
-	 $conn = mysqli_connect($dbhost, $dbuser, $dbpass,$dbname);
-	 header("Content-Type: text/html;charset=utf-8");
-	$conn->set_charset("utf8");
+	include 'BD/visita.php';
+
 
 	$query="SELECT * FROM servicios";
 	$result = $conn->query($query);
@@ -400,10 +393,9 @@
 								<li>Diseño web personalizado</li>
 								<li>Visualización en dispositivos móviles, smartphones, tablets</li>
 								<li>Integracion con redes sociales</li>
-								<li>Dominio Gratis (Depende de la disponibilidad)</li>
 							</ul>
 							<div class="price-title">								
-								<p>S/.<strong class="value">350</strong> </p>
+								<p>S/.<strong class="value">550</strong> </p>
 							</div>
 							<!-- Solicitar button -->
 							<a class="btn btn-transparent" id="p1" href="#contacto">Solicitar</a>
@@ -431,11 +423,11 @@
 								<li>Dominio Gratis (Depende de la disponibilidad)</li>
 								<li>Administrador de contenidos</li>
 								<li>Configuracion de Base de Datos</li>
-								<li>Soporte multi idioma</li>
+								
 
 							</ul>
 							<div class="price-title">								
-								<p>S/.<strong class="value">550</strong></p>
+								<p>S/.<strong class="value">850</strong></p>
 							</div>
 							<!-- /plan description -->
 							
@@ -470,7 +462,7 @@
 								<li>Carrito de compras</li>
 							</ul>
 							<div class="price-title">								
-								<p>S/. <strong class="value">750</strong></p>
+								<p>S/. <strong class="value">1250</strong></p>
 							</div>							
 							<!-- signup button -->
 							<a class="btn btn-transparent" id="p3" href="#contacto">Solicitar</a>
@@ -572,11 +564,17 @@
 								<i class="fa fa-envelope fa-lg"></i>
 								<span>Email: multiviralbeta@gmail.com</span>
 							</div>
+							<div class="con-info clearfix">
+								<i class="fa fa-envelope fa-lg"></i>
+								<span>Email: ignacio@multiviralperu.com</span>
+							</div>
+							<div class="con-info clearfix">
+								<i class="fa fa-envelope fa-lg"></i>
+								<span>Email: vanessa@multiviralperu.com</span>
+							</div>
 						</div>
 					</div>
-					<!-- / End Contact Details -->
-						
-					<!-- Contact Form -->
+
 					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
 						<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
 						
@@ -601,11 +599,11 @@
 							</div>
 							
 							<div id="mail-success" class="success">
-								Thank you. The Mailman is on His Way :)
+								Gracias! El correo esta en camino :)
 							</div>
 							
 							<div id="mail-fail" class="error">
-								Sorry, don't know what happened. Try later :(
+								Disculpe, esto nunca me pasa. Intentelo luego :(
 							</div>
 							
 							<div id="cf-submit">
@@ -621,7 +619,7 @@
 		
 	</section>
 
-<?php include 'contador.php'; ?>
+
 		<!-- end Contact Area
 		========================================== -->
 		
@@ -649,8 +647,8 @@
 							
 							<p>Diseñado y desarrollado <a href="https://www.facebook.com/multiviralbeta"> MultiViral</a>. Copyright &copy; 2017. Todos los derechos reservados.</p>
 							
-					<p style="float: left;">Visitante:
- 					<?php echo " <span style='color:white;' class='views'>".$total."</span>"; ?>
+					<p>Visitante:
+ 					 <span id='visitas' style='color:white;' class='views'></span>
 					</p>
 				
 
@@ -663,6 +661,25 @@
 			</div> <!-- end container -->
 		</footer> <!-- end footer -->
 		
+		<script id="source" language="javascript" type="text/javascript">
+		    setInterval(function () {
+		        $.ajax({
+		            url: 'BD/forajax.php',                  //the script to call to get data
+		            data: "",                        //you can insert url argumnets here to pass to api.php//for example "id=5&parent=6"
+		            dataType: 'json',                //data format
+		            success: function(data)          //on recieve of reply
+		            {
+		            	//console.log(data);
+		                var id = data[0];              //get id
+		                $('#visitas').html(id);
+		            }
+		        });
+
+		    },1000);
+
+		</script>
+		
+
 		<!-- Back to Top
 		============================== -->
 		<a href="javascript:;" id="scrollUp">
@@ -717,23 +734,9 @@
 		<script src="js/grid.js"></script>
 		<!-- Custom js -->
 		<script src="js/custom.js"></script>
-		<script>
-function bu1() {
-  $( "#ini" ).fadeOut( 500 ).delay( 100 ).fadeIn( 500 );
-  bu2();
-}
-  setInterval("bu1()", 10);
-</script>
-	<script>	
-		// Hacemos la Function para abrir el contador de visitas
-	function recargar_views(){
-	    $(".views").load("./contador.txt");
-	}
 
-	// Establecemos el temporizador a 1 segundos
-	timer = setInterval("recargar_views()", 1000);
 
-	</script>
+
 
 
     </body>
@@ -753,7 +756,7 @@ function bu1() {
 	$destino3="anibal.ventura@ucsp.edu.pe";
 	$remitente = $_POST['email'];
 
-	$asunto = "Asunto: CONTACTO WEB DE MULTIVIRAL";
+	$asunto = "Correo de Pagina Web Multiviral";
 	mail($destino,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino2,$asunto,$mensaje,"FROM: $remitente");
 	mail($destino3,$asunto,$mensaje,"FROM: $remitente");
