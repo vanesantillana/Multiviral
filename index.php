@@ -37,7 +37,7 @@
 		$opcion=$opcion.$servicio[$i][0];
 		$opcion=$opcion."</option>";
 	}
-	
+
 	if (!isset($_POST['email']) && !isset($_POST['email-c'])) {
 ?>
 
@@ -576,7 +576,7 @@
 					</div>
 
 					<div class="contact-form col-md-6 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
-						<form id="contact-form" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
+						<form id="contact-formaa" method="post" action="<?=$_SERVER['PHP_SELF']?>" role="form">
 						
 							<div class="form-group">
 								<input type="text" placeholder="Nombre" class="form-control" name="nombre" id="nombre" required>
@@ -607,7 +607,7 @@
 							</div>
 							
 							<div id="cf-submit">
-								<input type="submit" id="contact-submit" class="btn btn-transparent" value="Contactar">
+								<input type="submit"  class="btn btn-transparent" value="Contactar">
 							</div>						
 							
 						</form>
@@ -645,14 +645,7 @@
 							</a>
 							<br />
 							
-							<p>Diseñado y desarrollado <a href="https://www.facebook.com/multiviralbeta"> MultiViral</a>. Copyright &copy; 2017. Todos los derechos reservados.</p>
-							
-					<p>Visitante:
- 					 <span id='visitas' style='color:white;' class='views'></span>
-					</p>
-				
-
-
+							<p>Diseñado y desarrollado <a href="https://www.facebook.com/multiviralbeta"> MultiViral</a>. Copyright &copy; <?php echo date("Y"); ?>. Todos los derechos reservados.</p>
 						</div>
 						<!-- /copyright -->
 						
@@ -661,25 +654,7 @@
 			</div> <!-- end container -->
 		</footer> <!-- end footer -->
 		
-		<script id="source" language="javascript" type="text/javascript">
-		    setInterval(function () {
-		        $.ajax({
-		            url: 'BD/forajax.php',                  //the script to call to get data
-		            data: "",                        //you can insert url argumnets here to pass to api.php//for example "id=5&parent=6"
-		            dataType: 'json',                //data format
-		            success: function(data)          //on recieve of reply
-		            {
-		            	//console.log(data);
-		                var id = data[0];              //get id
-		                $('#visitas').html(id);
-		            }
-		        });
-
-		    },1000);
-
-		</script>
-		
-
+	
 		<!-- Back to Top
 		============================== -->
 		<a href="javascript:;" id="scrollUp">
@@ -766,7 +741,7 @@
 <?php
    echo "<script>";
    echo "alert('Mensaje enviado con exito');";
-   echo "window.location = 'index.php';";
+   echo "window.location.href='/';";
    echo "</script>";  
    }
 ?>

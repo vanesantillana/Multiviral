@@ -20,7 +20,6 @@ CREATE DATABASE prueba;
 //ingresar a prueba
 use prueba;
 
-//crear tabla para probar
 CREATE TABLE servicios (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 nombre VARCHAR(30) NOT NULL,
@@ -28,13 +27,10 @@ costo VARCHAR(30) NOT NULL,
 descripcion VARCHAR(50)
 );
 
-//revisar campos creados en la tabla
 DESCRIBE servicios;
 
-//modificar una columna - descripcion
 ALTER TABLE servicios MODIFY descripcion CHAR(255);
 
-//insertar datos a la tabla
 INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Diseño Web", "400","Creamos páginas web de máxima calidad, creativas y utilizando las técnicas más innovadoras para dar una imagen profesional.");
 
 INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Responsivo o Adaptable", "100","Tu diseño de página web será adaptable y flexible a cualquier dispositivo móvil o tablet.");
@@ -51,10 +47,7 @@ INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Mul
 
 INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Chat en linea", "250","De esta manera será más rápida la comunicación con los visitantes de tu web.");
 
-// Selecciona la tabla servicios
-SELECT * FROM servicios
 
-//Proximamente apps y software
 INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "APlicaciones Móviles", "600","Tienes una idea de una App, cuéntanos nosotros nos encargamos de hacerlo realidad.");
 
 INSERT INTO `servicios` (`id`,`nombre`,`costo`,`descripcion`) VALUES (NULL, "Software a Medida", "1000","Desarrollamos sistemas puntuales de acuerdo a las necesidades del cliente utilizando las ultimas tecnologías.");
